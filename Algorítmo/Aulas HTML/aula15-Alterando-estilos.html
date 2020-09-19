@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Aula 15-alterando estilos</title>
+</head>
+<body>
+    
+    <button onclick="quente()">Quente</button>
+    <button onclick="confortavel()">Confortável</button>
+    <button onclick="gelado()">Gelado</button>
+
+    <div id="div_clima">
+        O clima é algo que muda muito!
+    </div>
+
+</body>
+</html>
+
+<script>
+function quente() {
+    div_clima.style.color='red';    
+    div_clima.style.backgroundColor='yellow';
+}
+
+function confortavel() {
+    div_clima.style.color='black';   
+    div_clima.style.backgroundColor='gray'; 
+}
+
+function gelado() {
+    div_clima.style.color='blue';    
+    div_clima.style.backgroundColor='white';
+}
+</script>

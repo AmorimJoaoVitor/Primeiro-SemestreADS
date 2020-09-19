@@ -1,0 +1,14 @@
+.body{
+    background: black;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.title{
+    color:white
+}
+.inputCalc{
+    width: 200px;
+}

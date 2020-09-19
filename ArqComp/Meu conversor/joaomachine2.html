@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TermoLab's Machine</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+
+<body class="body">
+    <div class="calc">
+        <h1 class="title">TermoLab's Machine</h1>
+
+        <input id="input" type="text" placeholder="Digite o valor em decimal">
+
+        <button class="botao" onclick="converter()">Converter</button>
+
+        <div class="divResposta">
+            <span id="resposta"></span>
+        </div>
+
+    </div>
+    <div class="divNomes">
+        <p class="nome">Rafael Holland R.a:</p>
+        <p class="nome">Rennan Aquino R.a:</p>
+        <p class="nome">João Amorim R.a:01202021</p>
+        <p class="nome">Italo de Souza R.a:01202018</p>
+        <p class="nome">Lucas Nascimento R.a:01202029</p>
+        <p class="nome">Lucas Alves R.a: 01202084</p>
+    </div>
+
+</body>
+
+</html>
+
+<script>
+
+    function converter() {
+        let decimal = Number(input.value);
+        let octal = decimal.toString(8);
+        let hexadecimal = decimal.toString(16);
+        let binario = decimal.toString(2);
+
+        document.getElementById("resposta").innerHTML =  `o valor em decimal é igual a ${decimal} <br>`;
+        document.getElementById("resposta").innerHTML += `o valor em octal é igual a ${octal} <br>`;
+        document.getElementById("resposta").innerHTML +=  `o valor em hexadecimal é igual a ${hexadecimal} <br>`;
+        document.getElementById("resposta").innerHTML +=  `o valor em binario é igual a ${binario} <br>`;
+    }
+</script>

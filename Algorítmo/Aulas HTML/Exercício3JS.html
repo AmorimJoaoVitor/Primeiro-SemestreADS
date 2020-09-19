@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Exercício3</title>
+</head>
+<body>
+    <button onclick="carnivoro()">Carne</button>
+    <button onclick="vegano()">Legumes</button>
+    <button onclick="frutano()">Fruta</button>
+
+    <div id="tipo_comida"></div>
+
+</body>
+</html>
+
+<script>
+function carnivoro() {
+    tipo_comida.innerHTML = '<span style="background-color: red; color: white">  Churrasco na laje </span> ';
+    }
+
+function vegano() {
+    tipo_comida.innerHTML = '<span style="background-color: black; color: yellow">  Salada de maionese </span>';
+}
+
+function frutano() {
+    tipo_comida.innerHTML = '<span style="color: green;"> Salada de frutas </span>';
+}
+</script>

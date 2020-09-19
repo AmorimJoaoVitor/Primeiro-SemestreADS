@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Exercício4</title>
+</head>
+<body>
+    <!-- Crie um programa em HTML/JS que simule a notificação de gols numa partida de futebol assim...
+a) Tenha um título grande com  a frase "Brasil x Alemanha"
+b) Abaixo desse título, os botões "Gol do Brasil" e "Gol da Alemanha"
+c) Abaixo dos botões deve haver um texto em negrito dizendo "Tempo real do jogo:"
+d) Sempre que o 1º botão for clicado, deve aparecer, a frase
+    É goooolll do Brasil!!!
+e) Sempre que o 2º botão for clicado, deve aparecer, a frase
+    É goooolll da Alemanha!!!
+f) Detalhe importante: As frase descritas em d) e e) devem ir de acumulando abaixo 
+do que já existia na página. Ou seja, a primeira vez que clicar em algum dos botões o texto deve 
+ficar abaixo do texto descrito em c). E depois cada vez abaixo do que já existia e assim por diante. -->
+
+
+<h2><span style="color: chartreuse;">Brasil</span> x Alemanha</h2>
+
+<button onclick="gol_brasil()">Gol do Brasil!!!</button>
+<button onclick="gol_alemanha()">Gol da Alemanha!!!</button>
+<button onclick="fim_partida()">Fim da Partida!</button>
+<br>
+<b>Tempo real do jogo</b>
+<div id="tempo_real"></div>
+</body>
+</html>
+
+<script>
+    function gol_brasil(){
+        tempo_real.innerHTML += '<br><span style="color: green"> *É goooooolll do Brasiiill</span>';
+    }
+    function gol_alemanha(){
+        tempo_real.innerHTML += '<br><span style="background-color: rgb(158, 42, 42); color: yellow"> *É goooooolll da Alemanhaaa</span>';
+    }
+    function fim_partida(){
+        tempo_real.innerHTML = '';
+    }
+</script>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 1</title>
+</head>
+<body>
+
+<button onclick="pare()" style="background-color: black;"><b style="color: blue;">Pare</b></button>
+<button onclick="pense()" style="background-color:  black;"><b style="color: blue;">Pense</b></button>
+<button onclick="siga()" style="background-color: black;"><b style="color: blue">Siga</b></button>
+<br>
+    <br>
+        <br>
+<button onclick="carnivoro()">Carne</button>
+<button onclick="vegano()">Legumes</button>
+<button onclick="frutano()">Fruta</button>
+    
+</body>
+</html>
+<!-- Criar uma página com os botões "pare", "pense" e "siga" -->
+<script>
+
+function pare() {
+alert('Pare e aguarde');
+}
+    function pense(){
+        alert('Pense para tomar a melhor decisão');
+    }
+        function siga(){
+            alert('Siga em frente!');
+        }
+//  Criar um programa em que tenha os botões "Carne", "Legumes" e "Fruta"
+        function carnivoro(){
+            alert('Carne de panela, hummmm muito gostoso');
+            document.title='Ultimo botão pressionado: Carne';
+        }
+    function vegano(){
+        alert('É uma escolha sua!');
+        document.title='Ultimo botão pressionado: Legumes';
+    }
+function frutano(){
+alert('Importante comer sempre que der na telha!');
+document.title='Ultimo botão pressionado: Fruta';    
+}
+
+
+</script>
+

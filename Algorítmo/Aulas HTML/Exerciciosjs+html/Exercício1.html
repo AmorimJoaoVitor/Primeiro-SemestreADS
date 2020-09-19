@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exerc1</title>
+</head>
+<body>
+    <button onclick="esconder_foto()">Gente tímida </button>
+    <button onclick="mostrar_foto()">Gente confiante </button>
+<br><br>
+    
+    <img src="../../papai-cris.jpg" alt="Papai Cris" style="width: 300px; display: block;" id="foto_cristiano">
+</body>
+</html>
+
+<script>
+    function esconder_foto(){
+        foto_cristiano.style.display = 'none';
+    }
+    function mostrar_foto(){
+        foto_cristiano.style.display = 'block';
+    }
+</script>

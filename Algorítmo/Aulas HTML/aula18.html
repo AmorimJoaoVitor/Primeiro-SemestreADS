@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula18</title>
+</head>
+
+<body style="background-color: lightgray;">
+    <h2>Mini cadastro</h2>
+
+    Seu nome <input id="in_nome"> <br>
+    Seu bairro <input id="in_bairro"> <br>
+    Sua idade <input id="in_idade" placeholder="Sua idade"> <br>
+   
+     <button onclick="cadastrar()">
+         Fazer cadastro
+     </button>
+   
+     <button onclick="cadastrar_bonitinho()" style="color: blue;">
+        Fazer cadastro bonitinho
+        
+    </button>
+
+    <button onclick="cadastrar_lindo()">
+    Cadastrar lindo
+    </button>
+
+    <div id="div_cadastro"></div>
+
+</body>
+
+</html>
+
+<script>
+     function cadastrar() {
+         alert(in_nome.value);
+         alert(in_bairro.value);
+         alert(in_idade.value);
+     }
+     //Crases no inicio e fim
+     //${}
+     // Nem colchetes
+
+     function cadastrar_bonitinho() {
+        alert(`Você se chama ${in_nome.value}`);
+     
+        alert(`Você mora em um bairro bonito chamado: ${in_bairro.value}`);
+     
+        alert(`Você está ficando velho e está com ${in_idade.value} anos`);
+
+        alert(`Cadastro: ${in_nome.value}, que mora em ${in_bairro.value} e tem ${in_idade.value} anos`);
+
+     }
+    
+     function cadastrar_lindo(){
+          div_cadastro.innerHTML = `
+          Nome cadastrado:<b>${in_nome.value}</b> <br>
+          Bairro cadastrado:<b>${in_bairro.value}</b> <br>
+         Idade cadastrada: <b>${in_idade.value}</b> <br>
+         `; //Fecha crase aqui
+          div_cadastro.style.color = 'Blue';
+     }
+
+
+
+
+
+
+</script>
+
+
+
+
+

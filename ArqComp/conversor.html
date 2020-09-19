@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html  dir="ltr" lang="pt-br" xml:lang="pt-br">
+<head>
+    <title>1ADSA - Arquitetura Computacional 2020/2: Marise's Machines</title>
+    <link rel="shortcut icon" href="http://moodle.bandtec.com.br/theme/image.php/eduhub/theme/1596485112/favicon" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="moodle, 1ADSA - Arquitetura Computacional 2020/2: Marise's Machines" />
+<link rel="stylesheet" type="text/css" href="http://moodle.bandtec.com.br/theme/yui_combo.php?rollup/3.17.2/yui-moodlesimple-min.css" /><script id="firstthemesheet" type="text/css">/** Required in order to fix style inclusion problems in IE with YUI **/</script><link rel="stylesheet" type="text/css" href="http://moodle.bandtec.com.br/theme/styles.php/eduhub/1596485112_1/all" />
+<script type="text/javascript">
+//<![CDATA[
+var M = {}; M.yui = {};
+M.pageloadstarttime = new Date();
+M.cfg = {"wwwroot":"http:\/\/moodle.bandtec.com.br","sesskey":"v7A8tL5MQz","themerev":"1596485112","slasharguments":1,"theme":"eduhub","iconsystemmodule":"core\/icon_system_standard","jsrev":"1572400974","admin":"admin","svgicons":true,"usertimezone":"Am\u00e9rica\/Bahia","contextid":65369};var yui1ConfigFn = function(me) {if(/-skin|reset|fonts|grids|base/.test(me.name)){me.type='css';me.path=me.path.replace(/\.js/,'.css');me.path=me.path.replace(/\/yui2-skin/,'/assets/skins/sam/yui2-skin')}};
+var yui2ConfigFn = function(me) {var parts=me.name.replace(/^moodle-/,'').split('-'),component=parts.shift(),module=parts[0],min='-min';if(/-(skin|core)$/.test(me.name)){parts.pop();me.type='css';min=''}
+if(module){var filename=parts.join('-');me.path=component+'/'+module+'/'+filename+min+'.'+me.type}else{me.path=component+'/'+component+'.'+me.type}};
+YUI_config = {"debug":false,"base":"http:\/\/moodle.bandtec.com.br\/lib\/yuilib\/3.17.2\/","comboBase":"http:\/\/moodle.bandtec.com.br\/theme\/yui_combo.php?","combine":true,"filter":null,"insertBefore":"firstthemesheet","groups":{"yui2":{"base":"http:\/\/moodle.bandtec.com.br\/lib\/yuilib\/2in3\/2.9.0\/build\/","comboBase":"http:\/\/moodle.bandtec.com.br\/theme\/yui_combo.php?","combine":true,"ext":false,"root":"2in3\/2.9.0\/build\/","patterns":{"yui2-":{"group":"yui2","configFn":yui1ConfigFn}}},"moodle":{"name":"moodle","base":"http:\/\/moodle.bandtec.com.br\/theme\/yui_combo.php?m\/1572400974\/","combine":true,"comboBase":"http:\/\/moodle.bandtec.com.br\/theme\/yui_combo.php?","ext":false,"root":"m\/1572400974\/","patterns":{"moodle-":{"group":"moodle","configFn":yui2ConfigFn}},"filter":null,"modules":{"moodle-core-actionmenu":{"requires":["base","event","node-event-simulate"]},"moodle-core-blocks":{"requires":["base","node","io","dom","dd","dd-scroll","moodle-core-dragdrop","moodle-core-notification"]},"moodle-core-checknet":{"requires":["base-base","moodle-core-notification-alert","io-base"]},"moodle-core-chooserdialogue":{"requires":["base","panel","moodle-core-notification"]},"moodle-core-dock":{"requires":["base","node","event-custom","event-mouseenter","event-resize","escape","moodle-core-dock-loader","moodle-core-event"]},"moodle-core-dock-loader":{"requires":["escape"]},"moodle-core-dragdrop":{"requires":["base","node","io","dom","dd","event-key","event-focus","moodle-core-notification"]},"moodle-core-event":{"requires":["event-custom"]},"moodle-core-formchangechecker":{"requires":["base","event-focus","moodle-core-event"]},"moodle-core-handlebars":{"condition":{"trigger":"handlebars","when":"after"}},"moodle-core-languninstallconfirm":{"requires":["base","node","moodle-core-notification-confirm","moodle-core-notification-alert"]},"moodle-core-lockscroll":{"requires":["plugin","base-build"]},"moodle-core-maintenancemodetimer":{"requires":["base","node"]},"moodle-core-notification":{"requires":["moodle-core-notification-dialogue","moodle-core-notification-alert","moodle-core-notification-confirm","moodle-core-notification-exception","moodle-core-notification-ajaxexception"]},"moodle-core-notification-dialogue":{"requires":["base","node","panel","escape","event-key","dd-plugin","moodle-core-widget-focusafterclose","moodle-core-lockscroll"]},"moodle-core-notification-alert":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-notification-confirm":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-notification-exception":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-notification-ajaxexception":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-popuphelp":{"requires":["moodle-core-tooltip"]},"moodle-core-tooltip":{"requires":["base","node","io-base","moodle-core-notification-dialogue","json-parse","widget-position","widget-position-align","event-outside","cache-base"]},"moodle-core_availability-form":{"requires":["base","node","event","event-delegate","panel","moodle-core-notification-dialogue","json"]},"moodle-backup-backupselectall":{"requires":["node","event","node-event-simulate","anim"]},"moodle-backup-confirmcancel":{"requires":["node","node-event-simulate","moodle-core-notification-confirm"]},"moodle-course-categoryexpander":{"requires":["node","event-key"]},"moodle-course-dragdrop":{"requires":["base","node","io","dom","dd","dd-scroll","moodle-core-dragdrop","moodle-core-notification","moodle-course-coursebase","moodle-course-util"]},"moodle-course-formatchooser":{"requires":["base","node","node-event-simulate"]},"moodle-course-management":{"requires":["base","node","io-base","moodle-core-notification-exception","json-parse","dd-constrain","dd-proxy","dd-drop","dd-delegate","node-event-delegate"]},"moodle-course-modchooser":{"requires":["moodle-core-chooserdialogue","moodle-course-coursebase"]},"moodle-course-util":{"requires":["node"],"use":["moodle-course-util-base"],"submodules":{"moodle-course-util-base":{},"moodle-course-util-section":{"requires":["node","moodle-course-util-base"]},"moodle-course-util-cm":{"requires":["node","moodle-course-util-base"]}}},"moodle-form-dateselector":{"requires":["base","node","overlay","calendar"]},"moodle-form-passwordunmask":{"requires":[]},"moodle-form-shortforms":{"requires":["node","base","selector-css3","moodle-core-event"]},"moodle-form-showadvanced":{"requires":["node","base","selector-css3"]},"moodle-question-chooser":{"requires":["moodle-core-chooserdialogue"]},"moodle-question-preview":{"requires":["base","dom","event-delegate","event-key","core_question_engine"]},"moodle-question-qbankmanager":{"requires":["node","selector-css3"]},"moodle-question-searchform":{"requires":["base","node"]},"moodle-availability_completion-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_date-form":{"requires":["base","node","event","io","moodle-core_availability-form"]},"moodle-availability_grade-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_group-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_grouping-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_profile-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-qtype_ddimageortext-dd":{"requires":["node","dd","dd-drop","dd-constrain"]},"moodle-qtype_ddimageortext-form":{"requires":["moodle-qtype_ddimageortext-dd","form_filepicker"]},"moodle-qtype_ddmarker-dd":{"requires":["node","event-resize","dd","dd-drop","dd-constrain","graphics"]},"moodle-qtype_ddmarker-form":{"requires":["moodle-qtype_ddmarker-dd","form_filepicker","graphics","escape"]},"moodle-qtype_ddwtos-dd":{"requires":["node","dd","dd-drop","dd-constrain"]},"moodle-mod_assign-history":{"requires":["node","transition"]},"moodle-mod_bigbluebuttonbn-modform":{"requires":["base","node"]},"moodle-mod_forum-subscriptiontoggle":{"requires":["base-base","io-base"]},"moodle-mod_quiz-autosave":{"requires":["base","node","event","event-valuechange","node-event-delegate","io-form"]},"moodle-mod_quiz-dragdrop":{"requires":["base","node","io","dom","dd","dd-scroll","moodle-core-dragdrop","moodle-core-notification","moodle-mod_quiz-quizbase","moodle-mod_quiz-util-base","moodle-mod_quiz-util-page","moodle-mod_quiz-util-slot","moodle-course-util"]},"moodle-mod_quiz-modform":{"requires":["base","node","event"]},"moodle-mod_quiz-questionchooser":{"requires":["moodle-core-chooserdialogue","moodle-mod_quiz-util","querystring-parse"]},"moodle-mod_quiz-quizbase":{"requires":["base","node"]},"moodle-mod_quiz-repaginate":{"requires":["base","event","node","io","moodle-core-notification-dialogue"]},"moodle-mod_quiz-toolboxes":{"requires":["base","node","event","event-key","io","moodle-mod_quiz-quizbase","moodle-mod_quiz-util-slot","moodle-core-notification-ajaxexception"]},"moodle-mod_quiz-util":{"requires":["node","moodle-core-actionmenu"],"use":["moodle-mod_quiz-util-base"],"submodules":{"moodle-mod_quiz-util-base":{},"moodle-mod_quiz-util-slot":{"requires":["node","moodle-mod_quiz-util-base"]},"moodle-mod_quiz-util-page":{"requires":["node","moodle-mod_quiz-util-base"]}}},"moodle-message_airnotifier-toolboxes":{"requires":["base","node","io"]},"moodle-block_xp-filters":{"requires":["base","node","moodle-core-dragdrop","moodle-block_xp-rulepicker"]},"moodle-block_xp-notification":{"requires":["base","node","handlebars","button-plugin","moodle-core-notification-dialogue"]},"moodle-block_xp-rulepicker":{"requires":["base","node","handlebars","moodle-core-notification-dialogue"]},"moodle-filter_glossary-autolinker":{"requires":["base","node","io-base","json-parse","event-delegate","overlay","moodle-core-event","moodle-core-notification-alert","moodle-core-notification-exception","moodle-core-notification-ajaxexception"]},"moodle-filter_mathjaxloader-loader":{"requires":["moodle-core-event"]},"moodle-editor_atto-editor":{"requires":["node","transition","io","overlay","escape","event","event-simulate","event-custom","node-event-html5","node-event-simulate","yui-throttle","moodle-core-notification-dialogue","moodle-core-notification-confirm","moodle-editor_atto-rangy","handlebars","timers","querystring-stringify"]},"moodle-editor_atto-plugin":{"requires":["node","base","escape","event","event-outside","handlebars","event-custom","timers","moodle-editor_atto-menu"]},"moodle-editor_atto-menu":{"requires":["moodle-core-notification-dialogue","node","event","event-custom"]},"moodle-editor_atto-rangy":{"requires":[]},"moodle-report_eventlist-eventfilter":{"requires":["base","event","node","node-event-delegate","datatable","autocomplete","autocomplete-filters"]},"moodle-report_loglive-fetchlogs":{"requires":["base","event","node","io","node-event-delegate"]},"moodle-gradereport_grader-gradereporttable":{"requires":["base","node","event","handlebars","overlay","event-hover"]},"moodle-gradereport_history-userselector":{"requires":["escape","event-delegate","event-key","handlebars","io-base","json-parse","moodle-core-notification-dialogue"]},"moodle-tool_capability-search":{"requires":["base","node"]},"moodle-tool_lp-dragdrop-reorder":{"requires":["moodle-core-dragdrop"]},"moodle-tool_monitor-dropdown":{"requires":["base","event","node"]},"moodle-assignfeedback_editpdf-editor":{"requires":["base","event","node","io","graphics","json","event-move","event-resize","transition","querystring-stringify-simple","moodle-core-notification-dialog","moodle-core-notification-alert","moodle-core-notification-exception","moodle-core-notification-ajaxexception"]},"moodle-atto_accessibilitychecker-button":{"requires":["color-base","moodle-editor_atto-plugin"]},"moodle-atto_accessibilityhelper-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_align-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_bold-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_charmap-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_clear-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_collapse-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_emoticon-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_equation-button":{"requires":["moodle-editor_atto-plugin","moodle-core-event","io","event-valuechange","tabview","array-extras"]},"moodle-atto_html-button":{"requires":["moodle-editor_atto-plugin","event-valuechange"]},"moodle-atto_image-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_indent-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_italic-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_link-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_managefiles-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_managefiles-usedfiles":{"requires":["node","escape"]},"moodle-atto_media-button":{"requires":["moodle-editor_atto-plugin","moodle-form-shortforms"]},"moodle-atto_noautolink-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_orderedlist-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_recordrtc-button":{"requires":["moodle-editor_atto-plugin","moodle-atto_recordrtc-recording"]},"moodle-atto_recordrtc-recording":{"requires":["moodle-atto_recordrtc-button"]},"moodle-atto_rtl-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_strike-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_subscript-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_superscript-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_table-button":{"requires":["moodle-editor_atto-plugin","moodle-editor_atto-menu","event","event-valuechange"]},"moodle-atto_title-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_underline-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_undo-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_unorderedlist-button":{"requires":["moodle-editor_atto-plugin"]}}},"gallery":{"name":"gallery","base":"http:\/\/moodle.bandtec.com.br\/lib\/yuilib\/gallery\/","combine":true,"comboBase":"http:\/\/moodle.bandtec.com.br\/theme\/yui_combo.php?","ext":false,"root":"gallery\/1572400974\/","patterns":{"gallery-":{"group":"gallery"}}}},"modules":{"core_filepicker":{"name":"core_filepicker","fullpath":"http:\/\/moodle.bandtec.com.br\/lib\/javascript.php\/1572400974\/repository\/filepicker.js","requires":["base","node","node-event-simulate","json","async-queue","io-base","io-upload-iframe","io-form","yui2-treeview","panel","cookie","datatable","datatable-sort","resize-plugin","dd-plugin","escape","moodle-core_filepicker","moodle-core-notification-dialogue"]},"core_comment":{"name":"core_comment","fullpath":"http:\/\/moodle.bandtec.com.br\/lib\/javascript.php\/1572400974\/comment\/comment.js","requires":["base","io-base","node","json","yui2-animation","overlay","escape"]},"mathjax":{"name":"mathjax","fullpath":"https:\/\/cdnjs.cloudflare.com\/ajax\/libs\/mathjax\/2.7.2\/MathJax.js?delayStartupUntil=configured"}}};
+M.yui.loader = {modules: {}};
+
+//]]>
+</script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+    @font-face {
+	font-family:'MalayalamSangamMN-Regular';
+	src: url('http://moodle.bandtec.com.br/theme/eduhub/font/MalayalamSangamMN_gdi.eot');
+	src: url('http://moodle.bandtec.com.br/theme/eduhub/font/MalayalamSangamMN_gdi.eot?#iefix') format('embedded-opentype'),
+		url('http://moodle.bandtec.com.br/theme/eduhub/font/MalayalamSangamMN_gdi.woff') format('woff'),
+		url('http://moodle.bandtec.com.br/theme/eduhub/font/MalayalamSangamMN_gdi.ttf') format('truetype'),
+		url('http://moodle.bandtec.com.br/theme/eduhub/font/MalayalamSangamMN_gdi.svg#MalayalamSangamMN-Regular') format('svg');
+	font-weight: 400;
+	font-style: normal;
+	font-stretch: normal;
+	unicode-range: U+0020-201D;
+}
+        
+        @font-face {
+	font-family:'MyriadPro-Regular';
+	src: url('http://moodle.bandtec.com.br/theme/eduhub/font/MyriadPro-Regular_gdi.eot');
+	src: url('http://moodle.bandtec.com.br/theme/eduhub/font/MyriadPro-Regular_gdi.eot?#iefix') format('embedded-opentype'),
+		url('http://moodle.bandtec.com.br/theme/eduhub/font/MyriadPro-Regular_gdi.woff') format('woff'),
+		url('http://moodle.bandtec.com.br/theme/eduhub/font/MyriadPro-Regular_gdi.ttf') format('truetype'),
+		url('http://moodle.bandtec.com.br/theme/eduhub/font/MyriadPro-Regular_gdi.svg#MyriadPro-Regular') format('svg');
+	font-weight: 400;
+	font-style: normal;
+	font-stretch: normal;
+	unicode-range: U+0020-25CA;
+}
+   @font-face {
+  font-family: 'FontAwesome';
+  src: url('http://moodle.bandtec.com.br/theme/eduhub/font/fontawesome-webfont.eot?v=3.2.1');
+  src: url('http://moodle.bandtec.com.br/theme/eduhub/font/fontawesome-webfont.eot?#iefix&v=3.2.1') format('embedded-opentype'), 
+      url('http://moodle.bandtec.com.br/theme/eduhub/font/fontawesome-webfont.woff?v=3.2.1') 
+      format('woff'), 
+      url('http://moodle.bandtec.com.br/theme/eduhub/font/fontawesome-webfont.ttf?v=3.2.1') format('truetype'), 
+      url('http://moodle.bandtec.com.br/theme/eduhub/font/fontawesome-webfont.svg#fontawesomeregular?v=3.2.1') 
+      format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+    </style>
+    <script src="http://moodle.bandtec.com.br/theme/eduhub/javascript/modernizr.custom.js"></script>
+    <script src="http://moodle.bandtec.com.br/theme/eduhub/javascript/uisearch.js"></script>
+    <script src="http://moodle.bandtec.com.br/theme/eduhub/javascript/classie.js"></script>
+</head>
+
+<body  id="page-mod-resource-view" class="format-topics  path-mod path-mod-resource safari dir-ltr lang-pt_br yui-skin-sam yui3-skin-sam moodle-bandtec-com-br pagelayout-incourse course-4051 context-65369 cmid-37514 category-66 has-region-side-pre used-region-side-pre has-region-side-post empty-region-side-post side-pre-only">
+
+<div class="skiplinks">
+    <a href="#maincontent" class="skip">Ir para o conteúdo principal</a>
+</div><script type="text/javascript" src="http://moodle.bandtec.com.br/theme/yui_combo.php?rollup/3.17.2/yui-moodlesimple-min.js"></script><script type="text/javascript" src="http://moodle.bandtec.com.br/lib/javascript.php/1572400974/lib/javascript-static.js"></script>
+<script type="text/javascript" src="http://moodle.bandtec.com.br/theme/javascript.php/eduhub/1596485112/head"></script>
+<script type="text/javascript">
+//<![CDATA[
+document.body.className += ' jsenabled';
+//]]>
+</script>
+
+
+<header role="banner" class="navbar navbar-fixed-top moodle-has-zindex">
+    <nav role="navigation" class="navbar-inner">
+        <div class="container-fluid">
+            <div class="pull-left">
+            <a class="logo" href="http://moodle.bandtec.com.br"><img src="//moodle.bandtec.com.br/pluginfile.php/1/theme_eduhub/logo/1596485112/BLogo-Moodle-01-01.png" alt="logo"/> </a>
+            </div>
+            <a class="brand" href="http://moodle.bandtec.com.br">BandTec Moodle</a>
+                        <ul class="nav pull-right">
+                    <li></li>
+                
+                    <li class="search">
+                    <div class="column">
+					<div id="sb-search" class="sb-search">
+<form role="form" class="form-inline" id="demo-1" method="get" 
+      action="http://moodle.bandtec.com.br/course/search.php" id="searchbox_demo">
+				<input class="sb-search-input" placeholder="Search Courses..." type="text" value="" name="search" id="search">
+							<input class="sb-search-submit" type="submit" value="">
+							<span class="sb-icon-search"></span>
+						</form>
+					</div>
+				</div>
+                    </li>
+                </ul>
+        <div class="usermenu"><div class="moodle-actionmenu nowrap-items" id="action-menu-0" data-enhance="moodle-core-actionmenu">
+
+        <ul class="menubar" id="action-menu-0-menubar" role="menubar">
+
+            <!--
+
+            --><!--
+
+            --><li role="presentation"><a href="#" class=" toggle-display textmenu" id="action-menu-toggle-0" title="" role="menuitem"><span class="userbutton"><span class="usertext mr-1">JOÃO VITOR DE AMORIM BEZERRA .</span><span class="avatars"><span class="avatar current"><img src="http://moodle.bandtec.com.br/pluginfile.php/64398/user/icon/eduhub/f2?rev=98206054" alt="Imagem de JOÃO VITOR DE AMORIM BEZERRA ." title="Imagem de JOÃO VITOR DE AMORIM BEZERRA ." class="userpicture" width="35" height="35" role="presentation" /></span></span></span><b class="caret"></b></a>
+</li>
+
+        </ul>
+
+
+        <ul class="menu  align-tr-br" id="action-menu-0-menu" data-rel="menu-content" aria-labelledby="action-menu-toggle-0" role="menu" data-align="tr-br">
+            <li role="presentation">    <a href="http://moodle.bandtec.com.br/my/" class="icon menu-action" role="menuitem" data-title="mymoodle,admin" aria-labelledby="actionmenuaction-1"><img class="icon " alt="Painel" title="Painel" src="http://moodle.bandtec.com.br/theme/image.php/eduhub/core/1596485112/i/dashboard" /><span class="menu-action-text" id="actionmenuaction-1">Painel</span></a>
+
+
+
+
+
+</li><li role="presentation">
+<span class="filler">&nbsp;</span>
+
+
+
+</li><li role="presentation">    <a href="http://moodle.bandtec.com.br/user/profile.php?id=4975" class="icon menu-action" role="menuitem" data-title="profile,moodle" aria-labelledby="actionmenuaction-2"><img class="icon " alt="Perfil" title="Perfil" src="http://moodle.bandtec.com.br/theme/image.php/eduhub/core/1596485112/i/user" /><span class="menu-action-text" id="actionmenuaction-2">Perfil</span></a>
+
+
+
+
+
+</li><li role="presentation">    <a href="http://moodle.bandtec.com.br/grade/report/overview/index.php" class="icon menu-action" role="menuitem" data-title="grades,grades" aria-labelledby="actionmenuaction-3"><img class="icon " alt="Notas" title="Notas" src="http://moodle.bandtec.com.br/theme/image.php/eduhub/core/1596485112/t/grades" /><span class="menu-action-text" id="actionmenuaction-3">Notas</span></a>
+
+
+
+
+
+</li><li role="presentation">    <a href="http://moodle.bandtec.com.br/message/index.php" class="icon menu-action" role="menuitem" data-title="messages,message" aria-labelledby="actionmenuaction-4"><img class="icon " alt="Mensagens" title="Mensagens" src="http://moodle.bandtec.com.br/theme/image.php/eduhub/core/1596485112/t/message" /><span class="menu-action-text" id="actionmenuaction-4">Mensagens</span></a>
+
+
+
+
+
+</li><li role="presentation">    <a href="http://moodle.bandtec.com.br/user/preferences.php" class="icon menu-action" role="menuitem" data-title="preferences,moodle" aria-labelledby="actionmenuaction-5"><img class="icon " alt="Preferências" title="Preferências" src="http://moodle.bandtec.com.br/theme/image.php/eduhub/core/1596485112/t/preferences" /><span class="menu-action-text" id="actionmenuaction-5">Preferências</span></a>
+
+
+
+
+
+</li><li role="presentation">
+<span class="filler">&nbsp;</span>
+
+
+
+</li><li role="presentation">    <a href="http://moodle.bandtec.com.br/login/logout.php?sesskey=v7A8tL5MQz" class="icon menu-action" role="menuitem" data-title="logout,moodle" aria-labelledby="actionmenuaction-6"><img class="icon " alt="Sair" title="Sair" src="http://moodle.bandtec.com.br/theme/image.php/eduhub/core/1596485112/a/logout" /><span class="menu-action-text" id="actionmenuaction-6">Sair</span></a>
+
+
+
+
+
+</li>
+        </ul>
+</div></div>            
+            <div class="nav-collapse collapse">
+                
+                
+                            </div>
+            
+            <div class="clearfix"></div>
+        </div>
+        
+    </nav>
+</header>
+
+<div id="page">
+    <div class="container-fluid">
+    <div id="page-navbar" class="clearfix">
+            <nav class="breadcrumb-nav"><span class="accesshide" id="navbar-label">Caminho da página</span><nav aria-labelledby="navbar-label"><ul class="breadcrumb"><li><span itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a itemprop="url" href="http://moodle.bandtec.com.br/"><span itemprop="title">Página inicial</span></a></span> <span class="divider"> <span class="accesshide " ><span class="arrow_text">/</span>&nbsp;</span><span class="arrow sep">&#x25BA;</span> </span></li><li><span tabindex="0">Meus cursos</span> <span class="divider"> <span class="accesshide " ><span class="arrow_text">/</span>&nbsp;</span><span class="arrow sep">&#x25BA;</span> </span></li><li><span itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a itemprop="url" title="1ADSA - Arquitetura Computacional 2020/2" href="http://moodle.bandtec.com.br/course/view.php?id=4051"><span itemprop="title">1ADSA - Arquitetura Computacional 2020/2</span></a></span> <span class="divider"> <span class="accesshide " ><span class="arrow_text">/</span>&nbsp;</span><span class="arrow sep">&#x25BA;</span> </span></li><li><span tabindex="0">16/092020 Programando Máquina de Conversão Sistema...</span> <span class="divider"> <span class="accesshide " ><span class="arrow_text">/</span>&nbsp;</span><span class="arrow sep">&#x25BA;</span> </span></li><li><span itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a itemprop="url" title="Arquivo" href="http://moodle.bandtec.com.br/mod/resource/view.php?id=37514"><span itemprop="title">Marise's Machines</span></a></span></li></ul></nav></nav>
+            <div class="breadcrumb-button"></div>
+        </div>
+        </div>
+    
+    <div id="page-content" class="row-fluid">
+        <div class="container-fluid">
+        <div id="region-main-box" class="span9">
+            <div class="row-fluid">
+                <section id="region-main" class="span8 pull-right">
+                    <span class="notifications" id="user-notifications"></span><div role="main"><span id="maincontent"></span><h2>Marise's Machines</h2><div class="resourcecontent resourcegeneral">
+  <iframe id="resourceobject" src="http://moodle.bandtec.com.br/pluginfile.php/65369/mod_resource/content/1/Marises Machine.html?embed=1">
+    Clique no link <a href="http://moodle.bandtec.com.br/pluginfile.php/65369/mod_resource/content/1/Marises%20Machine.html" >Marises Machine.html</a> para visualizar o arquivo.
+  </iframe>
+</div></div>                </section>
+                <aside id="block-region-side-pre" class="span4 desktop-first-column block-region" data-blockregion="side-pre" data-droptarget="1"><a class="skip skip-block" id="fsb-1" href="#sb-1">Pular Navegação</a><div id="inst4" class="block_navigation  block" role="navigation" data-block="navigation" data-instanceid="4" aria-labelledby="instance-4-header"><div class="header"><div class="title"><div class="block_action"></div><h2 id="instance-4-header">Navegação</h2></div></div><div class="content"><ul class="block_tree list" role="tree" data-ajax-loader="block_navigation/nav_loader"><li class="type_unknown depth_1 contains_branch" aria-labelledby="label_1_1"><p class="tree_item branch navigation_node" role="treeitem" aria-expanded="true" aria-owns="random5f6227790ff362_group" data-collapsible="false"><a tabindex="-1" id="label_1_1" href="http://moodle.bandtec.com.br/">Página inicial</a></p><ul id="random5f6227790ff362_group" role="group"><li class="type_setting depth_2 item_with_icon" aria-labelledby="label_2_2"><p class="tree_item hasicon" role="treeitem"><a tabindex="-1" id="label_2_2" href="http://moodle.bandtec.com.br/my/"><img class="icon navicon" alt="" src="http://moodle.bandtec.com.br/theme/image.php/eduhub/core/1596485112/i/dashboard" /><span class="item-content-wrap">Painel</span></a></p></li><li class="type_system depth_2 contains_branch" aria-labelledby="label_2_4"><p class="tree_item branch canexpand" role="treeitem" aria-expanded="true" aria-owns="random5f6227790ff364_group"><span tabindex="-1" id="label_2_4">Meus cursos</span></p><ul id="random5f6227790ff364_group" role="group"><li class="type_course depth_3 item_with_icon" aria-labelledby="label_3_5"><p class="tree_item hasicon" role="treeitem" id="expandable_branch_20_4052"><a tabindex="-1" id="label_3_5" title="1ADSA - Algoritmos 2020/2" href="http://moodle.bandtec.com.br/course/view.php?id=4052"><img class="icon navicon" alt="" src="http://moodle.bandtec.com.br/theme/image.php/eduhub/core/1596485112/i/course" /><span class="item-content-wrap">1ADSA - Algoritmos 2020/2</span></a></p></li><li class="type_course depth_3 contains_branch" aria-labelledby="label_3_6"><p class="tree_item branch" role="treeitem" aria-expanded="true" aria-owns="random5f6227790ff365_group"><a tabindex="-1" id="label_3_6" title="1ADSA - Arquitetura Computacional 2020/2" href="http://moodle.bandtec.com.br/course/view.php?id=4051">1ADSA - Arquitetura Computacional 2020/2</a></p><ul id="random5f6227790ff365_group" role="group"><li class="type_container depth_4 contains_branch" aria-labelledby="label_4_7"><p class="tree_item branch" role="treeitem" aria-expanded="false" aria-owns="random5f6227790ff366_group"><a tabindex="-1" id="label_4_7" href="http://moodle.bandtec.com.br/user/index.php?id=4051">Participantes</a></p><ul id="random5f6227790ff366_group" role="group" aria-hidden="true"><li class="type_user depth_5 item_with_icon" aria-labelledby="label_5_8"><p class="tree_item hasicon" role="treeitem"><a tabindex="-1" id="label_5_8" href="http://moodle.bandtec.com.br/user/view.php?id=4975&amp;course=4051"><img class="icon navicon" alt="" src="http://moodle.bandtec.com.br/theme/image.php/eduhub/core/1596485112/i/navigationitem" /><span class="item-content-wrap">JOÃO VITOR DE AMORIM BEZERRA .</span></a></p></li></ul></li><li class="type_setting depth_4 item_with_icon" aria-labelledby="label_4_9"><p class="tree_item hasicon" role="treeitem"><a tabindex="-1" id="label_4_9" href="http://moodle.bandtec.com.br/admin/tool/lp/coursecompetencies.php?courseid=4051"><img class="icon navicon" alt="" src="http://moodle.bandtec.com.br/theme/image.php/eduhub/core/1596485112/i/competencies" /><span class="item-content-wrap">Competências</span></a></p></li><li class="type_setting depth_4 item_with_icon" aria-labelledby="label_4_10"><p class="tree_item hasicon" role="treeitem"><a tabindex="-1" id="label_4_10" href="http://moodle.bandtec.com.br/grade/report/index.php?id=4051"><img class="icon navicon" alt="" src="http://moodle.bandtec.com.br/theme/image.php/eduhub/core/1596485112/i/grades" /><span class="item-content-wrap">Notas</span></a></p></li><li class="type_structure depth_4 contains_branch" aria-labelledby="label_4_18"><p class="tree_item branch" role="treeitem" aria-expanded="true" aria-owns="random5f6227790ff3610_group"><span tabindex="-1" id="label_4_18">16/092020 Programando Máquina de Conversão Sistema...</span></p><ul id="random5f6227790ff3610_group" role="group"><li class="type_activity depth_5 item_with_icon current_branch" aria-labelledby="label_5_19"><p class="tree_item hasicon active_tree_node" role="treeitem"><a tabindex="-1" id="label_5_19" title="Arquivo" href="http://moodle.bandtec.com.br/mod/resource/view.php?id=37514"><img class="icon navicon" alt="Arquivo" title="Arquivo" src="http://moodle.bandtec.com.br/theme/image.php/eduhub/core/1596485112/f/html-24" /><span class="item-content-wrap">Marise's Machines</span></a></p></li></ul></li></ul></li><li class="type_course depth_3 item_with_icon" aria-labelledby="label_3_23"><p class="tree_item hasicon" role="treeitem" id="expandable_branch_20_4050"><a tabindex="-1" id="label_3_23" title="1ADSA - Banco de Dados 2020/2" href="http://moodle.bandtec.com.br/course/view.php?id=4050"><img class="icon navicon" alt="" src="http://moodle.bandtec.com.br/theme/image.php/eduhub/core/1596485112/i/course" /><span class="item-content-wrap">1ADSA - Banco de Dados 2020/2</span></a></p></li><li class="type_course depth_3 item_with_icon" aria-labelledby="label_3_24"><p class="tree_item hasicon" role="treeitem" id="expandable_branch_20_4049"><a tabindex="-1" id="label_3_24" title="1ADSA - Desenvolvimento Socioemocional I 2020/2" href="http://moodle.bandtec.com.br/course/view.php?id=4049"><img class="icon navicon" alt="" src="http://moodle.bandtec.com.br/theme/image.php/eduhub/core/1596485112/i/course" /><span class="item-content-wrap">1ADSA - Desenvolvimento Socioemocional I 2020/2</span></a></p></li><li class="type_course depth_3 item_with_icon" aria-labelledby="label_3_25"><p class="tree_item hasicon" role="treeitem" id="expandable_branch_20_4048"><a tabindex="-1" id="label_3_25" title="1ADSA - Pesquisa e Inovação I 2020/2" href="http://moodle.bandtec.com.br/course/view.php?id=4048"><img class="icon navicon" alt="" src="http://moodle.bandtec.com.br/theme/image.php/eduhub/core/1596485112/i/course" /><span class="item-content-wrap">1ADSA - Pesquisa e Inovação I 2020/2</span></a></p></li><li class="type_course depth_3 item_with_icon" aria-labelledby="label_3_26"><p class="tree_item hasicon" role="treeitem" id="expandable_branch_20_4047"><a tabindex="-1" id="label_3_26" title="1ADSA - Tecnologia da Informação 2020/2" href="http://moodle.bandtec.com.br/course/view.php?id=4047"><img class="icon navicon" alt="" src="http://moodle.bandtec.com.br/theme/image.php/eduhub/core/1596485112/i/course" /><span class="item-content-wrap">1ADSA - Tecnologia da Informação 2020/2</span></a></p></li></ul></li></ul></li></ul></div></div><span class="skip-block-to" id="sb-1"></span></aside>            </div>
+        </div>
+        <aside id="block-region-side-post" class="span3 pull-right block-region" data-blockregion="side-post" data-droptarget="1"></aside>    </div>
+    </div>
+
+   <div class="top-footer row-fluid">
+     <div class="container-fluid">
+        <div class="span6">
+          <h3></h3>
+           <p></p>
+<ul>
+             <li>
+                            </li>
+                 
+            <li>
+                           </li>
+                 
+            <li>
+                           </li>
+                 
+             <li>
+                           </li>
+        </ul>
+        </div>
+        <div class="span4">
+          <h3 class="blue"></h3>
+          <p></p>
+        <ul class="social">
+                                                       </ul>
+        </div>
+        <div class="clearfix"></div>
+
+    <div class="ftr-copyright">
+        <p class="copy">Copyright &copy; 2020 BandTec Digital School</p>     </div>
+        </div>
+    </div>
+    
+    
+        <footer id="page-footer">
+         <div class="container-fluid">
+        <div class="clearfix"></div>
+        <div id="course-footer"></div>
+        <p class="helplink"></p>
+        <div class="footnote text-center"><div class="text_to_html"><h3 style="text-align:center;">SUGESTÃO DE PROGRAMAS PARA DOWNLOAD<br /></h3><div class="block_navigation block row-fluid" style="background-color:#fff;"><div class="span1" style="margin-top:5px;margin-bottom:5px;margin-left:15%;"><h4><a href="http://portal.azure.com" target="_blank" rel="noreferrer noopener"><img src="http://www.digitalschool.com.br/assets/images/logos/parceiros/logo_azure.jpg" alt="Microsoft Azure" width="150" height="160" class="img-responsive atto_image_button_text-bottom" /></a><br /></h4></div><div class="span1" style="margin-top:15px;margin-bottom:5px;"><h4><a href="https://code.visualstudio.com/download" target="_blank" rel="noreferrer noopener"><img src="http://www.digitalschool.com.br/assets/images/logos/parceiros/logo_vscode.png" alt="VS Code" width="200" height="115" class="img-responsive atto_image_button_text-bottom" /></a><br /></h4></div><div class="span1" style="margin-top:15px;margin-bottom:5px;"><a href="https://dev.mysql.com/downloads/workbench/" target="_blank" rel="noreferrer noopener"><img src="http://www.digitalschool.com.br/assets/images/logos/parceiros/logo_mysql.jpg" alt="MySql Workbench" width="199" height="147" class="img-responsive atto_image_button_text-bottom" /></a></div><div class="span1" style="margin-top:5px;margin-bottom:5px;"><h4><a href="https://www.eclipse.org/downloads/download.php?file=/oomph/epp/2019-12/R/eclipse-inst-win64.exe" target="_blank" rel="noreferrer noopener"><img src="http://www.digitalschool.com.br/assets/images/logos/parceiros/logo_eclipse.png" alt="Eclipse" width="200" height="198" class="img-responsive atto_image_button_text-bottom" /></a><br /></h4></div><div class="span1" style="margin-top:15px;margin-bottom:5px;"><a href="https://netbeans.apache.org/download/nb112/nb112.html" target="_blank" rel="noreferrer noopener"><img src="http://www.digitalschool.com.br/assets/images/logos/parceiros/logo_netbeans.png" alt="Netbeans" width="200" height="150" class="img-responsive atto_image_button_text-bottom" /></a></div><div class="span1" style="margin-top:7px;margin-bottom:5px;"><a href="https://www.virtualbox.org/wiki/Downloads" target="_blank" rel="noreferrer noopener"><img src="http://www.digitalschool.com.br/assets/images/logos/parceiros/logo_virtualbox.jpg" alt="Virtual Box" width="200" height="208" class="img-responsive atto_image_button_text-bottom" /></a></div><div class="span1" style="margin-top:12px;margin-bottom:5px;"><a href="https://www.jetbrains.com/idea/download/#section=windows" target="_blank" rel="noreferrer noopener"><img src="http://www.digitalschool.com.br/assets/images/logos/parceiros/logo_intellijidea.png" alt="IntelliJ IDEA" width="200" height="171" class="img-responsive atto_image_button_text-bottom" /></a></div><div class="span1" style="margin-top:5px;margin-bottom:5px;"><a href="https://developer.android.com/studio" target="_blank" rel="noreferrer noopener"><img src="http://www.digitalschool.com.br/assets/images/logos/parceiros/logo_android_studio.jpg" alt="Android Studio" width="200" height="235" class="img-responsive atto_image_button_text-bottom" /></a></div></div></div></div><div class="logininfo">Você acessou como <a href="http://moodle.bandtec.com.br/user/profile.php?id=4975" title="Ver perfil">JOÃO VITOR DE AMORIM BEZERRA .</a> (<a href="http://moodle.bandtec.com.br/login/logout.php?sesskey=v7A8tL5MQz">Sair</a>)</div><a href="https://download.moodle.org/mobile?version=2018051701.02&amp;lang=pt_br&amp;iosappid=633359593&amp;androidappid=com.moodle.moodlemobile">Obter o aplicativo para dispositivos móveis</a>             <div>developed by <a href="http://www.themecaters.com/" style="color: #3e65a0;">themecaters.com</a></div>
+      </div>
+    </footer>
+
+        
+<script type="text/javascript">
+//<![CDATA[
+
+window.cancelEvent = function (evt) {
+	if ("isCancelled" in evt)
+		evt.isCancelled = true;
+	if ("preventDefault" in evt)
+		evt.preventDefault();
+	if ("stopPropagation" in evt)
+		evt.stopPropagation();
+	return false;
+}
+
+window.isMy = function () {
+	var urlend = window.location.href.substring(window.location.href.length + 0);
+	if (urlend == "" || urlend == "") return true;
+	if (window.location.href.length > 12) return (window.location.href.substring(window.location.href.length - 12) == "my/index.php");
+	return false;
+}
+
+window.mostraPopupPedro = function (isrc, desiredW, desiredH) {
+	var d, w = (desiredW || "700") + "px", w2 = (desiredW ? (desiredW >> 1) : "350") + "px", h = (desiredH || "550") + "px";
+	d = document.createElement("div");
+	d.id = "masterIFrame_1";
+	d.style.display = "table";
+
+	d.style.position = "fixed";
+	d.style.top = "0px";
+	d.style.left = "0px";
+
+	d.style.width = "100%";
+	d.style.height = "100%";
+	d.style.zIndex = "7500";
+	d.style.backgroundImage = "url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAMAAACdt4HsAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAGUExURQAAAAAAAKVnuc8AAAACdFJOUzNLY/YwEAAAACxJREFUeNrtzjEBAAAMAiDXv/RC+HhAAnKltAwMDAwMDAwMDAwMDAwMDNYHDxgeCAG8bPrEAAAAAElFTkSuQmCC)";
+	d.style.backgroundRepeat = "repeat repeat";
+	d.innerHTML = "<div style=\"display: table-row;\"><div style=\"display: table-cell; text-align: center; vertical-align: middle; padding: 0px 20px;\"><div style=\"width: 100%; height: 5px; max-width: " + w + "; position: relative; margin: 0px auto; text-align: right;\"><img title=\"Fechar\" alt=\"Fechar\" onclick=\"document.body.removeChild(document.getElementById('masterIFrame_1'));\" style=\"border: 0px none transparent; display: inline-block; margin-right: -16px; margin-top: -16px; cursor: pointer;\" width=\"30\" height=\"30\" src=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAACXBIWXMAAAsTAAALEwEAmpwYAAAABGdBTUEAANjr9RwUqgAAACBjSFJNAABtmAAAc44AAPJxAACDbAAAg7sAANTIAAAx7AAAGbyeiMU/AAAG7ElEQVR42mJkwA8YoZjBwcGB6fPnz4w/fvxg/PnzJ2N6ejoLFxcX47Rp036B5Dk4OP7z8vL+P3DgwD+o3v9QjBUABBALHguZoJhZXV2dVUNDgxNIcwEtZnn27Nl/ZmZmQRYWFmag5c90dHQY5OXl/z98+PDn1atXv79+/foPUN9fIP4HxRgOAAggRhyWMoOwqKgoq6GhIZe3t7eYrq6uHBDb8/Pz27Gysloga/jz588FYGicPn/+/OapU6deOnXq1GdgqPwCOuA31AF/0S0HCCB0xAQNBU4FBQWB0NBQublz59oADV37Hw28ePHi74MHD/6ii3/8+HEFMGQUgQ6WEhQU5AeZBTWTCdkigABC9ylIAZeMjIxQTEyMysaNG/3+/v37AGTgr1+//s2cOfOXm5vbN6Caz8jY1NT0a29v76/v37//g6q9sHfv3khjY2M5YAgJgsyEmg0PYYAAQreUk4+PT8jd3V1l1apVgUAzfoIM2rlz5x9gHH5BtxAdA9PB1zNnzvyB+R6oLxoopgC1nBPZcoAAgiFQnLIDMb+enp5iV1eXBzDeHoI0z58//xcwIX0mZCkMg9S2trb+hFk+ffr0QCkpKVmQ2VA7QHYxAgQQzLesQMwjIiIilZWVZfPu3bstMJ+SYikyBmUzkBnA9HEMyNcCYgmQHVC7mAACCJagOEBBbGdnp7lgwYJEkIavX7/+BcY1SvAaGRl9tba2xohjMTGxL8nJyT+AWQsuxsbG9vnp06e/QWYdPHiwHmiWKlBcCGQXyNcAAQSzmBuoSQqYim3u37+/EKR48uTJv5ANB+bVr7Dga2xs/AkTV1JS+gq0AJyoQIkPWU9aWtoPkPibN2/2A/l6QCwJ9TULQADB4hcY//xKXl5eHt++fbsAUmxhYYHiM1DiAsr9R7ZcVVUVbikIdHd3/0TWIyws/AWYVsByAgICdkAxRSAWAGI2gACClV7C4uLiOv7+/lEgRZ8+ffqLLd6ABck3ZMuB6uCWrlu37je29HDx4kVwQisvL88FFqkaQDERUHADBBAomBl5eHiYgQmLE1hSgQQZgIUD1lJm69atf4HR8R1YKoH5QIPAWWP9+vV/gOI/gHkeQw+wGAXTwAJJ5t+/f/BUDRBA4NIEKMDMyMjICtQIiniG379/4yza7t69+//Lly8oDrty5co/bJaCAEwcZCkwwTJDLWYCCCCwxcDgY3z16hXDnTt3voP4EhISWA0BFgZMwNqHExh3jMiG1tbWsgHjnA2bHmAeBtdWwOL1MycnJ7wAAQggBmi+kgIW/OaKiorJwOLuFShO0LMSMPF9AUYBSpz6+vqixHlOTs4P9MIEWHaDsxSwYMoE2mEGFJcG5SKAAGJCqjv/AbPUn8ePH98ACQQHB6NUmZqamkzABIgSp5s3bwbHORCA1QDLAWZkPc7OzszA8oHl5cuXVy5duvQBGIXwWgoggGA+FgO6xkBNTS28r69vDrT2+Y1cIMDyJchX6KkXVEmAshd6KB06dAic94EO3AzkBwGxPhCLg8ptgACCZyeQp9jZ2b2AmsuAefM8tnxJCk5ISPgOLTKfAdNEOVDMA2QHLDsBBBC8AAFlbmCLwlZISCg5JSVlJizeQAaQaimoWAUFK0g/sGGwHiiWCMS2yAUIQAAxI7c4gEmeFZi4OJ48ecLMzc39CRiEmgEBASxA/QzA8vYvAxEgNjaWZc2aNezAsprp2LFjp4FpZRdQ+AkQvwLij0AMSoC/AQIIXklAC3AVUBoBxmE8sPXQAiyvN8J8fuPGjR/h4eHf0eMdhkENhOPHj8OT+NGjR88BxZuBOA5kJtRseCUBEECMSI0AdmgBDooDaaDl8sASTSkyMlKzpqZGU1paGlS7MABLrX83b978A6zwwakTmE0YgIkSnHpBfGCV+gxYh98qKSk5CeTeAxVeQPwUiN8AMSjxgdLNX4AAYkRqCLBAXcMHtVwSaLkMMMHJAvOq9IQJE9R8fHxElJWV1bEF8aNHj+7t27fvLTDlXwXGLyhoH0OD+DnU0k/QYAa1QP8BBBAjWsuSFWo5LzRYxKFYAljqiAHzqxCwIBEwMTERBdZeoOYMA7Bl+RFYEbwB5oS3IA9D4/IFEL+E4nfQ6IDFLTgvAwQQI5ZmLRtSsINSuyA0uwlBUyQPMPWD20/AKo8ByP4DTJTfgRgUjB+gFoEc8R6amGDB+wu5mQsQQIxYmrdMUJ+zQTM6NzQEeKGO4UJqOzFADQMZ/A1qCSzBfQXi71ALfyM17sEAIIAY8fQiWKAYFgIwzIbWTv4HjbdfUAf8RPLhH1icojfoAQKIEU8bG9kRyF0aRiz6YP0k5C4LsmUY9TtAADEyEA+IVfufGEUAAQYABejinPr4dLEAAAAASUVORK5CYII=\" /></div><iframe style=\"background: url(data:image/gif;base64,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) no-repeat #fff; background-position: center center; box-shadow: 0 2px 4px 0 rgba(0,0,0,0.3); border: 0px none transparent; margin: 0px auto; padding: 0px; width: 100%; height: " + h + "; display: block; max-width: " + w + ";\" src=\"" + isrc + "\"></iframe></div></div>";
+
+	return document.body.appendChild(d);
+}
+
+/* https://developer.mozilla.org/en-US/docs/Web/API/Document/cookie
+:: cookies.js ::
+
+A complete cookies reader/writer framework with full unicode support.
+
+Revision #1 - September 4, 2014
+
+https://developer.mozilla.org/en-US/docs/Web/API/document.cookie
+https://developer.mozilla.org/User:fusionchess
+
+This framework is released under the GNU Public License, version 3 or later.
+http://www.gnu.org/licenses/gpl-3.0-standalone.html
+
+Modified by Carlos Rafael Gimenes das Neves
+*/
+window.Cookies = {
+	create: function (name, value, expires, path, domain, secure) {
+		if (!name || /^(?:expires|max\-age|path|domain|secure)$/i.test(name)) return false;
+		var exp = "";
+		if (expires) {
+			switch (expires.constructor) {
+				case Number:
+					if (expires === Infinity) {
+						exp = "; expires=Fri, 31 Dec 9999 23:59:59 GMT";
+					} else {
+						exp = new Date();
+						exp.setTime(exp.getTime() + (expires * 60 * 60 * 1000));
+						exp = "; expires=" + exp.toUTCString();
+					}
+					break;
+				case Date:
+					exp = "; expires=" + expires.toUTCString();
+					break;
+				case String:
+					exp = "; expires=" + expires;
+					break;
+			}
+		}
+		document.cookie = encodeURIComponent(name) + "=" + encodeURIComponent(value) + exp + (path ? "; path=" + path : "") + (domain ? "; domain=" + domain : "") + (secure ? "; secure" : "");
+		return true;
+	},
+	get: function (name) {
+		return (!name ? null : (decodeURIComponent(document.cookie.replace(new RegExp("(?:(?:^|.*;)\\s*" + encodeURIComponent(name).replace(/[\-\.\+\*]/g, "\\$&") + "\\s*\\=\\s*([^;]*).*$)|^.*$"), "$1")) || null));
+	},
+	remove: function (name, path, domain) {
+		if (!Cookies.exists(name)) return false;
+		document.cookie = encodeURIComponent(name) + "=; expires=Thu, 01 Jan 1970 00:00:00 GMT" + (path ? "; path=" + path : "") + (domain ? "; domain=" + domain : "");
+		return true;
+	},
+	exists: function (name) {
+		if (!name) return false;
+		return (new RegExp("(?:^|;\\s*)" + encodeURIComponent(name).replace(/[\-\.\+\*]/g, "\\$&") + "\\s*\\=")).test(document.cookie);
+	},
+	names: function () {
+		var ns = document.cookie.replace(/((?:^|\s*;)[^\=]+)(?=;|$)|^\s*|\s*(?:\=[^;]*)?(?:\1|$)/g, "").split(/\s*(?:\=[^;]*)?;\s*/);
+		for (var len = ns.length, idx = 0; idx < len; idx++) ns[idx] = decodeURIComponent(ns[idx]);
+		return ns;
+	}
+};
+
+(function () {
+	var i, b, bs = document.getElementsByTagName("button");
+	if (bs) {
+		for (i = 0; i < bs.length; i++) {
+			b = bs[i];
+			if (b.textContent.toUpperCase() == "MORE")
+				b.textContent = "ABRIR";
+		}
+	}
+})();
+
+(function () {
+	var cabecalho = document.getElementsByTagName("h2"), icone, isAluno = true, isAtHome = false,
+		logado, i, achou, sessionUser = false, userName, userMail, userLogin, links, alertNotLogged = function () {
+			links = document.getElementsByTagName("a");
+			if (links && links[0]) {
+				for (i = links.length - 1; i >= 0; i--) {
+					if (links[i].href == "http://redirdreamspark" ||
+						links[i].href == "http://redirdreamspark/" ||
+						links[i].href == "http://redirvmware" ||
+						links[i].href == "http://redirvmware/") {
+						links[i].onclick = function (e) {
+							alert("Você deve estar logado para acessar esse recurso!");
+							return cancelEvent(e);
+						};
+					}
+				}
+			}
+		};
+
+	if (cabecalho && cabecalho[0] && cabecalho[0].textContent.indexOf("Avisos") >= 0) {
+		icone = document.createElement("span");
+		icone.className = "fa fa-warning";
+		icone.style.fontSize = "32px";
+		icone.style.marginRight = "8px";
+		icone.style.color = "#32b9cd";
+		cabecalho[0].style.background = "#34373f";
+		cabecalho[0].style.color = "#fff";
+		cabecalho[0].insertBefore(icone, cabecalho[0].firstChild);
+		isAtHome = true;
+	}
+
+	sessionUser = false;
+	function carregarUser() {
+		if (!("localStorage" in window))
+			return false;
+		userName = window.localStorage["userName"];
+		userMail = window.localStorage["userMail"];
+		if (!userName || !userMail) {
+			userName = "";
+			userMail = "";
+			return false;
+		}
+		sessionUser = true;
+		return true;
+	}
+
+	if ("getElementsByClassName" in document) {
+		logado = document.getElementsByClassName("block_myprofile");
+		if (!logado || !logado[0]) {
+			logado = null;
+			if (!carregarUser())
+				return alertNotLogged();
+		} else {
+			logado = logado[0];
+		}
+	} else {
+		logado = document.getElementsByTagName("div");
+		if (!logado || !logado[0]) {
+			logado = null;
+			if (!carregarUser())
+				return alertNotLogged();
+		} else {
+			logado = logado[0];
+		}
+		achou = null;
+		for (i = logado.length - 1; i >= 0; i--) {
+			if (logado[i].className.indexOf("block_myprofile") >= 0) {
+				achou = logado[i];
+				break;
+			}
+		}
+		if (!achou) {
+			if (!carregarUser())
+				return alertNotLogged();
+		}
+		logado = achou;
+	}
+
+	if (!sessionUser) {
+		achou = logado.getElementsByTagName("div");
+		if (!achou || !achou[0]) return alertNotLogged();
+		for (i = achou.length - 1; i >= 0; i--) {
+			if (achou[i].className.indexOf("fullname") >= 0)
+				userName = achou[i].textContent;
+			if (achou[i].className.indexOf("email") >= 0)
+				userMail = achou[i].textContent;
+		}
+		if (("localStorage" in window)) {
+			window.localStorage["userName"] = (userName || "");
+			window.localStorage["userMail"] = (userMail || "");
+		}
+	}
+
+	if (logado) {
+		//******************************************************
+		// Para deixar o bloco Usuário Autenticado visível,
+		// basta comentar a linha abaixo:
+		logado.parentNode.removeChild(logado);
+		//******************************************************
+	}
+
+	if (!userName || !userMail) return alertNotLogged();
+
+	if (String && String.prototype && ("toUpperCase" in String.prototype)) {
+		userName = userName.toUpperCase();
+		userMail = userMail.toLowerCase();
+	}
+
+	userLogin = (((i = userMail.indexOf("@")) > 0) ? userMail.substr(0, i) : userMail);
+
+	isAluno = !isNaN(parseInt(userLogin, 10));
+	//isAluno = (("" + parseInt(userLogin)) == userLogin);
+
+	links = document.getElementsByTagName("a");
+	if (links && links[0]) {
+		for (i = links.length - 1; i >= 0; i--) {
+			if (links[i].href == "https://www.digitalbuilding.com.br/Chamado.aspx") {
+				links[i].href = "#";
+				links[i].onclick = function (e) {
+					mostraPopupPedro("https://digitalbuilding.azurewebsites.net/Chamado.aspx?user=" + encodeURIComponent(userName) + "&mail=" + encodeURIComponent(userMail));
+					return cancelEvent(e);
+				};
+			} else if (links[i].href == "http://webmail.bandtec.com.br/" ||
+				links[i].href == "http://webmail.bandtec.com.br" ||
+				links[i].href == "http://educaretecnologiadai.rm.cloudtotvs.com.br/rm/web/app/edu/portaleducacional/login/" ||
+				links[i].href == "http://educaretecnologiadai.rm.cloudtotvs.com.br/rm/web/app/edu/portaleducacional/login/") {
+				links[i].target = "_blank";
+			} else if (links[i].href == "http://redirdreamspark" || links[i].href == "http://redirdreamspark/") {
+				links[i].href = "http://digitalbuilding.com.br/Redir.aspx?tipo=0&id=" + encodeURIComponent(userLogin);
+			} //else if (links[i].href == "http://redirvmware" || links[i].href == "http://redirvmware/") {
+			//links[i].href = "http://digitalbuilding.com.br/Redir.aspx?tipo=1&id=" + encodeURIComponent(userLogin);
+			//}
+		}
+	}
+
+	if (isAtHome) {
+		if (isAluno) {
+			var reqMsg = new XMLHttpRequest(), done = false;
+			reqMsg.open("GET", "http://digitalschool.com.br/ObtemMensagem.ashx?ra=" + userLogin, true);
+			reqMsg.onreadystatechange = function () {
+				if (done || reqMsg.readyState != 4) return true;
+				done = true;
+
+				if (reqMsg.status != 200) return true;
+				if (reqMsg.responseText && reqMsg.responseText.length > 1) {
+					var recvMsg = reqMsg.responseText, recvMsgSplit = recvMsg.indexOf("|");
+					if (isNaN(recvMsgSplit) || recvMsgSplit <= 0) return true;
+					mostraPopupPedro("http://digitalschool.com.br/ObtemMensagem.aspx?msg=" + encodeURIComponent(reqMsg.responseText.substr(recvMsgSplit + 1)), 500, 350);
+				}
+			};
+			reqMsg.send();
+			
+		}
+		
+		var reqMsg = new XMLHttpRequest(), done = false;
+			reqMsg.open("GET", "http://digitalschool.com.br/ObtemMensagem.ashx?ra=" + userLogin, true);
+			reqMsg.onreadystatechange = function () {
+				if (done || reqMsg.readyState != 4) return true;
+				done = true;
+
+				if (reqMsg.status != 200) return true;
+				if (reqMsg.responseText && reqMsg.responseText.length > 1) {
+					var recvMsg = reqMsg.responseText, recvMsgSplit = recvMsg.indexOf("|");
+					if (isNaN(recvMsgSplit) || recvMsgSplit <= 0) return true;
+					mostraPopupPedro("http://digitalschool.com.br/ObtemMensagem.aspx?msg=" + encodeURIComponent(reqMsg.responseText.substr(recvMsgSplit + 1)), 500, 350);
+				}
+			};
+			reqMsg.send();
+			
+		//++mostraPopupPedro("", 600, 575);
+		//mostraPopupPedro("http://digitalbuilding.com.br/Banner.html",600, 450);
+				
+		//mostraPopupPedro("http://digitalbuilding.com.br/ObtemMensagem.aspx?msg="+encodeURIComponent("http://digitalbuilding.com.br/ObtemMensagem.ashx?ra=" + userLogin),500, 350);
+		
+		//TechWeek 2017
+		//mostraPopupPedro("http://digitalbuildingdiversos.azurewebsites.net/tw2017.html", 600, 450);
+
+	} else if (isMy()) {
+		
+		//mostraPopupPedro("http://moodle.bandtec.com.br/draftfile.php/3082/user/draft/676089651/ep201701.jpg", 640, 427);
+		//mostraPopupPedro("http://digitalbuilding.com.br/Career2016.html", 640, 427);
+		//mostraPopupPedro("http://digitalbuilding.com.br/Mostra2016.html", 600, 400);
+		//mostraPopupPedro("", 650, 600);
+	} 
+
+	var divChamada = document.getElementById("divChamada");
+	var uls = document.getElementsByTagName("UL"), ulnav = null, picture = "";
+	if (divChamada && uls && uls.length) {
+		for (i = 0; i < uls.length; i++) {
+			if (uls[i].className == "breadcrumb") {
+				ulnav = uls[i];
+				break;
+			}
+		}
+		if (ulnav && (uls = ulnav.getElementsByTagName("LI")) && uls.length >= 3) {
+			picture = $("img.userpicture");
+			if (picture && (picture = picture[0]) && picture.src) {
+				picture = picture.src;
+				i = picture.lastIndexOf("rev=");
+				if (i <= 0)
+					picture = "";
+			} else {
+				picture = "";
+			}
+			ulnav = document.createElement("iframe");
+			ulnav.style.width = "100%";
+			ulnav.style.height = "150px";
+			ulnav.style.border = "0";
+			ulnav.style.margin = "0";
+			ulnav.setAttribute("src", "https://digitalbuilding.azurewebsites.net/Chamada/Default.aspx?mail=" + encodeURIComponent(userMail) + "&discipline=" + encodeURIComponent(uls[uls.length - 1].textContent) + "&user=" + encodeURIComponent(userName) + "&picture=" + encodeURIComponent(picture));
+			divChamada.appendChild(ulnav);
+		}
+	}
+	
+	var divBiblioteca = document.getElementById("divBiblioteca");
+	var navBib;
+	
+	navBib = document.createElement("iframe");
+	navBib.style.width = "100%";
+	navBib.style.height = "440px";
+	navBib.style.border = "0";
+	navBib.style.margin = "0";
+	navBib.setAttribute("src", "http://www.digitalschool.com.br/biblioteca/");
+	divBiblioteca.appendChild(navBib);
+	
+	var divTotvsNovo = document.getElementById("divTotvsNovo");
+	var navTotvs;
+	
+	navTotvs = document.createElement("iframe");
+	navTotvs.style.width = "100%";
+	navTotvs.style.height = "150px";
+	navTotvs.style.border = "0";
+	navTotvs.style.margin = "0";
+	navTotvs.setAttribute("src", "http://www.bandtec.com.br/totvs/default.html");
+	divTotvs.appendChild(navTotvs);
+
+})();
+
+//]]>
+</script>
+
+<script type="text/javascript">
+//<![CDATA[
+var require = {
+    baseUrl : 'http://moodle.bandtec.com.br/lib/requirejs.php/1572400974/',
+    // We only support AMD modules with an explicit define() statement.
+    enforceDefine: true,
+    skipDataMain: true,
+    waitSeconds : 0,
+
+    paths: {
+        jquery: 'http://moodle.bandtec.com.br/lib/javascript.php/1572400974/lib/jquery/jquery-3.2.1.min',
+        jqueryui: 'http://moodle.bandtec.com.br/lib/javascript.php/1572400974/lib/jquery/ui-1.12.1/jquery-ui.min',
+        jqueryprivate: 'http://moodle.bandtec.com.br/lib/javascript.php/1572400974/lib/requirejs/jquery-private'
+    },
+
+    // Custom jquery config map.
+    map: {
+      // '*' means all modules will get 'jqueryprivate'
+      // for their 'jquery' dependency.
+      '*': { jquery: 'jqueryprivate' },
+      // Stub module for 'process'. This is a workaround for a bug in MathJax (see MDL-60458).
+      '*': { process: 'core/first' },
+
+      // 'jquery-private' wants the real jQuery module
+      // though. If this line was not here, there would
+      // be an unresolvable cyclic dependency.
+      jqueryprivate: { jquery: 'jquery' }
+    }
+};
+
+//]]>
+</script>
+<script type="text/javascript" src="http://moodle.bandtec.com.br/lib/javascript.php/1572400974/lib/requirejs/require.min.js"></script>
+<script type="text/javascript">
+//<![CDATA[
+require(['core/first'], function() {
+;
+require(["media_videojs/loader"], function(loader) {
+    loader.setUp(function(videojs) {
+        videojs.options.flash.swf = "http://moodle.bandtec.com.br/media/player/videojs/videojs/video-js.swf";
+videojs.addLanguage("pt-BR",{
+ "Play": "Tocar",
+ "Pause": "Pausar",
+ "Current Time": "Tempo",
+ "Duration Time": "Duração",
+ "Remaining Time": "Tempo Restante",
+ "Stream Type": "Tipo de Stream",
+ "LIVE": "AO VIVO",
+ "Loaded": "Carregado",
+ "Progress": "Progresso",
+ "Fullscreen": "Tela Cheia",
+ "Non-Fullscreen": "Tela Normal",
+ "Mute": "Mudo",
+ "Unmute": "Habilitar Som",
+ "Playback Rate": "Velocidade",
+ "Subtitles": "Legendas",
+ "subtitles off": "Sem Legendas",
+ "Captions": "Anotações",
+ "captions off": "Sem Anotações",
+ "Chapters": "Capítulos",
+ "You aborted the media playback": "Você parou a execução do vídeo.",
+ "A network error caused the media download to fail part-way.": "Um erro na rede fez o vídeo parar parcialmente.",
+ "The media could not be loaded, either because the server or network failed or because the format is not supported.": "O vídeo não pode ser carregado, ou porque houve um problema com sua rede ou pelo formato do vídeo não ser suportado.",
+ "The media playback was aborted due to a corruption problem or because the media used features your browser did not support.": "A execução foi interrompida por um problema com o vídeo ou por seu navegador não dar suporte ao seu formato.",
+ "No compatible source was found for this media.": "Não foi encontrada fonte de vídeo compatível."
+});
+
+    });
+});;
+require(["block_navigation/navblock"], function(amd) { amd.init("4"); });;
+require(["block_settings/settingsblock"], function(amd) { amd.init("5", null); });;
+
+require(['core/yui'], function(Y) {
+    M.util.init_skiplink(Y);
+});
+;
+
+require(['core/yui'], function(Y) {
+    Y.use('moodle-core-actionmenu', function() {
+        M.core.actionmenu.init();
+    });
+});
+;
+require(["core/notification"], function(amd) { amd.init(65369, []); });;
+require(["core/log"], function(amd) { amd.setConfig({"level":"warn"}); });
+});
+//]]>
+</script>
+<script type="text/javascript" src="http://moodle.bandtec.com.br/lib/javascript.php/1572400974/theme/eduhub/yui/bttotop.js"></script>
+<script type="text/javascript" src="http://moodle.bandtec.com.br/theme/javascript.php/eduhub/1596485112/footer"></script>
+<script type="text/javascript">
+//<![CDATA[
+M.str = {"moodle":{"lastmodified":"\u00daltima atualiza\u00e7\u00e3o","name":"Nome","error":"Erro","info":"Informa\u00e7\u00e3o","yes":"Sim","no":"N\u00e3o","viewallcourses":"Ver todos os cursos","cancel":"Cancelar","morehelp":"Mais ajuda","loadinghelp":"Carregando...","confirm":"Confirmar","areyousure":"Voc\u00ea tem certeza?","closebuttontitle":"Fechar","unknownerror":"Erro desconhecido"},"repository":{"type":"Tipo","size":"Tamanho","invalidjson":"palavra JSON inv\u00e1lida","nofilesattached":"Nenhum arquivo anexado","filepicker":"Seletor de arquivos","logout":"Sair","nofilesavailable":"Nenhum arquivo dispon\u00edvel","norepositoriesavailable":"Desculpe, nenhum dos seus reposit\u00f3rios atuais pode retornar arquivos no formato solicitado.","fileexistsdialogheader":"Arquivo existe","fileexistsdialog_editor":"Um arquivo com este nome j\u00e1 foi anexado ao texto que voc\u00ea est\u00e1 editando","fileexistsdialog_filemanager":"Um arquivo com este nome j\u00e1 foi anexado","renameto":"Renomear para \"{$a}\"","referencesexist":"H\u00e1 {$a} arquivos pseud\u00f4nimos\/atalhos que usam este arquivo como fonte","select":"Selecione"},"admin":{"confirmdeletecomments":"Voc\u00ea est\u00e1 prestes a excluir coment\u00e1rios, tem certeza?","confirmation":"Confirma\u00e7\u00e3o"}};
+//]]>
+</script>
+<script type="text/javascript">
+//<![CDATA[
+(function() { M.util.js_pending('random5f6227790ff361'); Y.on('domready', function() { M.util.init_maximised_embed(Y, "resourceobject");  M.util.js_complete('random5f6227790ff361'); });
+Y.use("moodle-filter_mathjaxloader-loader",function() {M.filter_mathjaxloader.configure({"mathjaxconfig":"\nMathJax.Hub.Config({\n    config: [\"Accessible.js\", \"Safe.js\"],\n    errorSettings: { message: [\"!\"] },\n    skipStartupTypeset: true,\n    messageStyle: \"none\"\n});\n","lang":"pt-br"});
+});
+M.util.help_popups.setup(Y);
+Y.use("moodle-core-popuphelp",function() {M.core.init_popuphelp();
+});
+ M.util.js_pending('random5f6227790ff3621'); Y.on('domready', function() { M.util.js_complete("init");  M.util.js_complete('random5f6227790ff3621'); });
+})();
+//]]>
+</script>
+<div id="back-to-top" style="display: none;"> 
+    <a class="arrow" href="#" title="Voltar ao Topo"><i class="fa fa-arrow-up"></i></a> 
+</div>
+
+</div>
+<script type="text/javascript">
+    $(function(){     
+$('h3.blue').each(function(){
+    var text = $(this).text().split(' ');
+    if(text.length < 2)
+        return;
+    text[0] = '<span class="coursenam-blue">'+text[0]+'</span>';
+    $(this).html( text.join(' ') );
+});        
+   });
+</script>
+<script>
+	new UISearch( document.getElementById( 'sb-search' ) );
+    $( ".block > .content" ).addClass( "clearfix" ); 
+</script>
+</body>
+</html>
