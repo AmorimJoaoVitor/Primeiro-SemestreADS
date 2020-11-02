@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exerc 11 - cofrinho</title>
+</head>
+
+<body>
+    <h2>Confrinho</h2>
+
+    Valor guardado no confrinho: R$<b id="dinheiro">0.00</b><br>
+    Quantidade de depósitos feitos: <b id="contagem_depositos">0</b><br>
+    Quantidade de retiradas feitas: <b id="contagem_retiradas">0</b><br>
+
+    Digite o valor a ser depositado <input type="text" id="in_valor"><br>
+    <button onclick="deposito()">Depositar</button>
+    <button onclick="tirar()">Tirar toda a grana</button>
+
+</body>
+
+</html>
+
+<script>
+    function deposito() {
+        var money = Number(in_valor.value);
+        var valor = Number(dinheiro.innerHTML);
+        valor += money
+        dinheiro.innerHTML = valor;
+
+        var contd = Number(contagem_depositos.innerHTML);
+             contd ++
+        contagem_depositos.innerHTML = contd;     
+    }
+    function tirar() {
+        dinheiro.innerHTML = "0.00";
+        var contr = Number(contagem_retiradas.innerHTML);
+            contr ++
+            contagem_retiradas.innerHTML = contr;
+    }
+</script>
+
+<!-- 11. Crie um programa em HTML/JS que simule um cofrinho da seguinte forma:
+a) Tenha, logo de cara, a frase "Valor guardado no cofrinho: R$0.00"
+b) Solicite o valor a se depositado
+c) Ao clicar num botão "Depositar", o valor informado em b) é adicionado ao valor exibido na frase descrita em a)
+d) Ao clicar num botão "Tirar toda a grana", o valor exibido em a) volta a 0.00
+ 
+12. Melhore o programa da questão anterior de tal forma que:
+a) Abaixo da frase do valor guardado tenha as seguintes frases:
+    Quantidade de depósitos feitos: 0
+    Quantidade de retiradas feitas: 0
+b) Sempre que for clicado no botão "Depositar", o valor de "depósitos feitos" aumenta em 1
+c) Sempre que for clicado no botão "Tirar toda a grana", o valor de "retiradas feitas" aumenta em 1
+-->

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>João's machine</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="body">
+<div class="container">
+    <div class="calc">
+        <h1>Amorim's Machine</h1>
+
+        <h4>Digite um número decimal</h4>
+        <input type="text" id="in_num1" placeholder="Digite um número decimal">
+
+        <p>
+            <button onclick="converter()" class="botao">Converter</button>
+        </p>
+
+        <b id="resultado"></b>
+    </div>
+</div>
+</body>
+
+</html>
+<script>
+    function converter() {
+        var decimal = Number(in_num1.value);
+        let binario = decimal.toString(2);
+        let octal = decimal.toString(8);
+        let hexadecimal = decimal.toString(16);
+
+        document.getElementById("resultado").innerHTML = `O valor em Decimal é: ${decimal}<br>`;
+        document.getElementById("resultado").innerHTML += `O valor em Octal é: ${octal}<br>`;
+        document.getElementById("resultado").innerHTML += `O valor em Hexadecimal é: ${hexadecimal}<br>`;
+        document.getElementById("resultado").innerHTML += `O valor em Binário é: ${binario}`;
+    }
+</script>

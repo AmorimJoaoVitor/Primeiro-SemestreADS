@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semáforo avançado</title>
+</head>
+
+<body style="display: flex; flex-direction: column; align-items: center;">
+
+    <h2>Semáforo</h2>
+
+    <div>
+        <img onclick="sem_vermelho()" id="vermelho" src="imagens/vermelho-fraco.png" alt="vermelho" style="width: 50px; cursor: pointer; border-radius: 20px;">
+    </div>
+    <div>
+        <img onclick="sem_amarelo()" id="amarelo" src="imagens/amarelo-escuro.jpg" alt="amarelo" style="width: 50px; cursor: pointer; border-radius: 20px;">
+    </div>
+    <div>
+        <img onclick="sem_verde()" id="verde" src="imagens/verde-fraco.jpg" alt="verde" style="width: 60px; cursor: pointer; border-radius: 20px;">
+    </div>
+
+</body>
+
+
+</html>
+
+<script>
+   function sem_vermelho(){
+       vermelho.src = "imagens/vermelho.jpg";
+       amarelo.src = "imagens/amarelo-escuro.jpg";
+       verde.src = "imagens/verde-fraco.jpg"; 
+       vermelho.style.width = "60px";
+       vermelho.style.height = "50px";
+   }
+   function sem_amarelo(){
+       vermelho.src = "imagens/vermelho-fraco.png";
+       amarelo.src = "imagens/amarelo.png";
+       verde.src = "imagens/verde-fraco.jpg"; 
+   }
+   function sem_verde(){
+       vermelho.src = "imagens/vermelho-fraco.png";
+       amarelo.src = "imagens/amarelo-escuro.jpg";
+       verde.src = "imagens/verde.png"; 
+   }
+</script>
+
+<!-- 9 (desafio). Refaça a questão anterior de tal forma que:
+a) Inicialmente, as cores do semáforo estejam "fracas"
+b) Ao clicar numa das luzes, somente ela fica "forte" e as demais continuam "fracas"
+OBS: Use apenas as técnicas ensinadas em aula até agora. -->

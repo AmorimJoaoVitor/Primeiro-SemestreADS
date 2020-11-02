@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exerc7</title>
+</head>
+
+<body>
+    <select name="" id="select_cafe">
+        <option value="ovos">Ovos</option>
+        <option value="leite_arroz">Leite de Arroz</option>
+        <option value="bacon">Bacon</option>
+    </select>
+    <br>
+    <select name="" id="select_almoco">
+        <option value="bife">Bife</option>
+        <option value="hamburguer_soja">Hambúrguer de soja</option>
+        <option value="frango_grelhado">Frango grelhado</option>
+    </select>
+    <br>
+    <select name="" id="select_jantar">
+        <option value="picanha">Picanha de soja</option>
+        <option value="cupim">Cupim</option>
+        <option value="coracao">Coração</option>
+    </select>
+<button onclick="verificar_cardapio()">Sou vegano</button>
+</body>
+
+</html>
+
+<script>
+    function verificar_cardapio(){
+        var cafe = select_cafe.value
+        var almoco = select_almoco.value
+        var jantar = select_jantar.value
+
+        if(cafe == "leite_arroz" && almoco == "hamburguer_soja"
+         && jantar == "picanha") {
+             alert("Sim você é vegano!");
+         }
+         else {
+             alert("Você não é vegano");
+         }
+    }
+</script>
+<!-- 7. Crie um programa em HTML/JS que verifique se o usuário é vegano ou não.
+a) Numa combo pergunte o que ele come no café da manhã, tendo as opções
+    ovos
+    leite de arroz
+    bacon
+b) Numa outra combo pergunte o que ele come no almoço, tendo as opções
+    bife
+    hamburger de soja
+    frango grelhado
+c) Numa outra combo pergunte o que ele come na janta, tendo as opções
+    picanha de soja
+    cupim
+    coração
+
+d) Ao clicar no botão "Sou vegano", aparece um alert com uma dessas frases:
+    "Sim, você é vegano!", caso ele consuma leite de arroz no café, hamburger de soja no almoço e picanha de soja na janta
+    "Não, você não é vegano", caso contrário -->

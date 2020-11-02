@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exerc3</title>
+</head>
+<body>
+    <input type="text" id="in_num" placeholder="Digite um número">
+    
+    <button onclick="calcularRaiz()">Mostrar Quadrado</button>
+    <button onclick="calcularCubo()">Mostrar Cubo</button>
+
+    <div id="div_resultado"></div>
+
+</body>
+</html>
+
+<script>
+    function calcularRaiz(){
+        var raiz = in_num.value ** 2;
+        div_resultado.innerHTML = `Raiz quadrada deste número:${raiz}`;
+    }
+    function calcularCubo(){
+        var cubo = in_num.value ** 3;
+        div_resultado.innerHTML = `Raiz cúbica deste número:${cubo}`;         
+    }
+</script>
+
+<!-- 3. Crie um programa em HTML/JS o qual:
+
+a) Solicite um número qualquer
+
+b) Ao clicar no botão "Exibir sua raiz quadrada", exiba abaixo do botão a raiz quadrada do número
+
+c) Ao clicar no botão "Exibir sua raiz cúbica", exiba abaixo do botão a raiz cúbica do número
+
+ -->

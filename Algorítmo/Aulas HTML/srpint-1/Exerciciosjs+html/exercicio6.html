@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício6 - goku</title>
+</head>
+
+<body style="align-items: center; display: flex; flex-direction: column;">
+    <h2>Formas do Goku</h2>
+    <div style="flex-direction: column; align-items: center; display: flex;">
+        <button onclick="ssj_um()">Transformar em SSJ</button><br>
+        <button onclick="ssj_dois()">Transformar em SSJ2</button><br>
+        <button onclick="ssj_tres()">Transformar em SSJ3</button><br>
+        <button onclick="ssj()">Voltar para a forma base</button><br>
+        <div>
+            <b id="forma_goku">Ki base do guerreiro Sayajin 2000</b><br><br>
+        </div>
+        <img src="Imagens/goku.png" alt="Goku apenas" id="img_goku">
+    </div>
+
+</body>
+
+</html>
+
+<script>
+
+    function ssj() {
+        forma_goku.innerHTML = "";
+        img_goku.src = "Imagens/goku.png"
+    }
+    function ssj_um() {
+        var goku1 = 2000 * 50;
+        forma_goku.innerHTML = `<b style="color: darkblue;">ki na forma SSJ: ${goku1}</b>`
+        img_goku.src = "Imagens/gokussj.png"
+    }
+    function ssj_dois() {
+        var goku1 = 2000 * 100;
+        forma_goku.innerHTML = `<b style="color: yellow; background-color: blue;">ki na forma SSJ: ${goku1}</b>`
+        img_goku.src = "Imagens/gokussj2.png"
+    }
+    function ssj_tres() {
+        var goku1 = 2000 * 200;
+        forma_goku.innerHTML = `<b style="color: orange; background-color: yellow">ki na forma SSJ: ${goku1}</b>`
+        img_goku.src = "Imagens/gokussj3.png"
+    }
+</script>
+<!-- 6. Na franquia de animes "Dragon Ball Z" existe uma raça chamada Sayajins. Um Sayajin pode se transformar, aumentando seu ki (poder de luta), da seguinte forma:
+* Forma Base: ki base
+* Forma SSJ: ki base x 50
+* Forma SSJ2: ki base x 100
+* Forma SSJ3: ki base x 200
+Crie um programa em HTML/JS que:
+a) Tenha um texto dizendo "ki base do Guerreiro Sayajin: 2000".
+b) Tenha um botão "Tranformar em SSJ". Ao clicar nele, aparece o texto "ki na forma SSJ: 100000" na cor azul escura abaixo.
+c) Tenha um botão "Tranformar em SSJ2". Ao clicar nele, aparece o texto "ki na forma SSJ2: 200000" na cor amarela e fundo azul abaixo.
+d) Tenha um botão "Tranformar em SSJ3". Ao clicar nele, aparece o texto "ki na forma SSJ3: 400000" na cor laranja e fundo amarelo abaixo.
+e) Tenha um botão "Voltar para a forma Base". Ao clicar nele, qualquer texto que esteja abaixo dos botões deve sumir (é como se tivesse dado F5 na página).
+OBS: Não deve aparecer mais de um texto por vez (itens b), c) e d)) -->

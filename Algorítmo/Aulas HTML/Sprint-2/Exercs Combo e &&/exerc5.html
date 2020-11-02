@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tinder</title>
+</head>
+<body>
+    <select name="" id="in_cabelo">
+        <option value=""></option>
+        <option value="1">Preto</option>
+        <option value="2">Vermelho</option>
+        <option value="3">Amarelo</option>
+        <option value="4">Castanho</option>
+    </select><br>
+    Digite sua altura <input type="text" id="in_altura">
+    <br>
+    <button onclick="verificar()">Deu match?</button><br>
+    <img src="" alt="" id="rosto">
+
+</body>
+</html>
+
+<script>
+    function verificar(){
+        var cabelo = Number(in_cabelo.value);
+        var altura = Number(in_altura.value);
+
+        if(cabelo == 1 || cabelo == 2 && altura >= 1.70){
+            rosto.src = "rosto-feliz.jpg";
+        }
+        else{
+            rosto.src = "rosto-triste.jpg";
+        }
+    }
+</script>
+
+<!-- 5. O aplicativo Tinder é muito popular entre os jovens no Brasil. Menos entre os alunos Bandtec,que 
+    são focados no estudos e não na pegação ou relacionamentos. Zé Buduia, no entanto, não sai do Tinder e 
+    tem preferência por mulheres altas (a partir de 1,7m) e de cabelo pretos ou vermelhos. Crie um simulador 
+    de Tinder para ele no qual:
+a) Numa combo, pergunte a cor de cabelo da moça, tendo disponíveis as opções
+   Preto
+   Vermelho
+   Amarelo
+   Castanho
+b) Pergunte a altura da moça
+c) Ao clicar em "Deu match?", mostre, abaixo:
+    A imagem de um cara feliz/empolgado, caso as características sejam conforme as explicadas aqui que o 
+    Zé gosta
+   Ou a imagem de um cara decepcionado em caso contrário
+d) Faça o teste de mesa ANTES de começar a codificar -->

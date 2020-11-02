@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exerc 8</title>
+</head>
+<body>
+    Digite o tempo em anos que trabalhou para o pai da pretendente<input type="text" id="in_tempo">
+    <br>
+    quantidade (em kilos) de rendimento da plantação de trigo: <input type="text" id="in_trigo">
+    <br>
+    Quantidade em dias que ele faltou ao trabalho <input type="text" id="in_dias_falta">
+    <br>
+    <button onclick="verificar()">Deu match?</button>
+    <br>
+    <div id="div_frase">
+    </div>
+    <img id="humor" src="" alt="">
+</body>
+</html>
+
+<script>
+    function verificar(){
+        var tempo = Number(in_tempo.value);
+        var trigo = Number(in_trigo.value);
+        var falta = Number(in_dias_falta.value);
+        
+        if(tempo >= 5 && trigo >= 300 && falta < 5){
+            div_frase.innerHTML = "Minha filha será sua!"
+            humor.src = "noiva.jpg";
+        }
+        else{
+            div_frase.innerHTML = "Deu ruim! Trabalhe mais dois anos";
+            humor.src = "pai-bravo.jpg"
+        }
+    }
+</script>
+
+<!-- 8. Milhares de anos antes de Cristo não existia Tinder, Badoo e afins para se conseguir um relacionamento, seja ele breve ou duradouro. Para um pai permitir que sua filha se relacionasse com sua filha, as vezes colocava condições insanas. Um deles, segundo consta na Bíblia cristã, exigiu 14 anos de trabalho para um rapaz. Vamos ajudar um pai dessa época a verificar se um homem pode casar com sua filha.
+a) Solicite o tempo, em anos, que ele trabalhou para o pai da pretendente
+b) Solicite a quantidade, em kilos, de trigo, que suas plantações renderam
+c) Solicite a quantidade em dias que ele falou ao trabalho por estar doente
+d) Ao clicar no botão "Deu match?", podem aparecer as seguintes coisas abaixo desse botão:
+    A frase "Minha filha será sua!" e a foto de uma noiva. Somente se o homem trabalhou pelo menos 5 anos, se seu trabalho rendeu pelo menos 300 kilos de trigo e se faltou até 5 dias de trabalho.
+    A frase "Deu ruim! Trabalhe mais 2 anos" e a foto de um homem representando um pai bravo, caso contrário. -->

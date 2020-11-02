@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Times</title>
+</head>
+<body>
+    Para qual time grande de SP você torce?<br>
+    <select name="" id="in_time">
+        <option value="0"> </option>
+        <option value="sp.png">São Paulo</option>
+        <option value="santos.png">Santos</option>
+        <option value="corinthans.png">Corinthans</option>
+        <option value="palmeiras.png">Palmeiras</option>
+    </select>
+    <br>
+    <button onclick="ver()">Ver escudo</button>
+    <img id="img_time" src="" alt="">
+</body>
+</html>
+
+<script>
+    function ver(){
+        img_time.src = in_time.value;
+    }
+</script>

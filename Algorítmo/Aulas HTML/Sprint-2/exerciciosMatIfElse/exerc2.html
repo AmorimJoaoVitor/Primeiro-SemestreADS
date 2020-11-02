@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exerc2</title>
+</head>
+<body>
+    <input type="text" id="in_raio" placeholder="Digite o raio da circunferência">
+    
+    <button onclick="calcular()">Calcular área</button>
+
+    <div id="div_resultado"></div>
+
+</body>
+</html>
+
+<script>
+    function calcular(){
+        var circulo = 3.14 * in_raio.value ** 2;
+        div_resultado.innerHTML = `Área de circuferência: ${circulo.toFixed(2)}`;
+    }
+</script>
+
+<!-- 2. Crie um programa em HTML/JS o qual:
+a) Solicite o raio de uma circunferência
+b) Ao clicar num botão "Calcular Área", calcule e exiba a área da circunferência na tela, abaixo do botão (considere o PI como sendo 3,14)
+
+ -->

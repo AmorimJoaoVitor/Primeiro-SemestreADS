@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exerc9</title>
+</head>
+
+<body>
+    <h2>Indice de contaminação do skol virus</h2>
+
+    Quantas pessoas estão infectadas <input type="text" id="in_infectadas">
+
+    <button onclick="ontem()">Infectadas ontem</button>
+    <button onclick="amanha()">Infectadas amanhã</button>
+    <button onclick="mes()">Infectadas daqui a um mês</button>
+
+    <div id="div_resultado"></div>
+
+</body>
+
+</html>
+
+<script>
+
+    function ontem() {
+        var infectados = Number(in_infectadas.value);
+         infectados -= 35;
+        div_resultado.innerHTML = `Ontem haviam ${infectados} pessoas infectadas`;
+    }
+    function amanha(){
+        var infectados = Number(in_infectadas.value);
+         infectados += 35;
+        div_resultado.innerHTML = `Amanhã haverá ${infectados} pessoas infectadas`;
+    }
+    function mes(){
+        var infectados = Number(in_infectadas.value);
+        infectados += (35 * 30);
+        div_resultado.innerHTML = `No próximo mês haverá ${infectados} pessoas infectadas`;
+    }
+
+</script>
+
+
+<!-- 9. Crie um programa em HTML/JS que ajude a mostrar o passado e o futuro da contaminação do SkolVírus. Este virus infecta 
+    
+    cerca de 35 pessoas por dia. OBS: Faça o teste de mesa antes de programar! OBS2: Use um dos "atalhos matemáticos" 
+    demonstrados na aula 23.
+a) Solicite a quantidade de pessoas atualmente infectadas
+
+b) Ao clicar no botão "Quantas pessoas infectadas ontem", mostra, abaixo dele a frase
+    Ontem haviam X pessoas infectadas ontem
+
+c) Ao clicar no botão "Quantas pessoas infectadas amanhã", mostra, abaixo dele a frase
+    Amanhã haverão X pessoas infectadas
+
+d) Ao clicar no botão "Quantas pessoas infectadas daqui a 1 mês" (considere que 1 mês tem 30 dias), mostra, abaixo dele a frase
+    Daqui a 1 mês haverão X pessoas infectadas
+
+ -->

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 5</title>
+</head>
+<body>
+<h3>Times campeões mundiais em São Paulo</h3>
+    
+    <img src="corinthans.png" alt="timão" id="mun_corinthans" style="width: 100px;" onclick="qt_corinthans()">
+    <span id="exibir_corinthans">
+
+    </span>
+    <br>
+    <img src="sp.png" alt="Bambi" id="mun_sp" style="width: 150px;" onclick="qt_sp()">
+    <span id="exibir_sp">
+
+    </span>
+    <button style="float: right;" onclick="rem_escudos()">Resetar programa</button><button onclick="esconder()" style="float: right;" id="botao_esconder">Esconder escudos</button>
+    <button id="botao_mostrar" onclick="mostrar()" style="display: none; float: right;">Mostrar escudos</button>
+    <br>
+    <img src="santos.png" alt="peixão" id="mun_san" style="width: 120px;" onclick="qt_san()">
+    <span id="exibir_san">
+
+    </span>
+    <br>
+    <img src="palmeiras.png" alt="porcão" id="mun_palmeiras" style="width: 120px;" onclick="qt_palmeiras()">
+    <span id="exibir_pal">
+    
+
+    </span>
+    
+    <br>
+    
+</body>
+</html>
+
+<script>
+    function qt_corinthans(){
+    exibir_corinthans.innerHTML = "<img src='taca.jpg' alt='timão;' style='width:100px'>"
+    exibir_corinthans.innerHTML += "<img src='taca.jpg' alt='timão;' style='width:100px'>"
+
+    }
+    function qt_sp(){
+    exibir_sp.innerHTML = "<img src='taca.jpg' alt='bambi;' style='width:100px'>"
+    exibir_sp.innerHTML += "<img src='taca.jpg' alt='bambi;' style='width:100px'>"
+    exibir_sp.innerHTML += "<img src='taca.jpg' alt='bambi;' style='width:100px'>"
+
+
+    }
+    function qt_san(){
+    exibir_san.innerHTML = "<img src='taca.jpg' alt='peixão;' style='width:100px'>"
+    exibir_san.innerHTML += "<img src='taca.jpg' alt='peixão;' style='width:100px'>"
+
+    
+    }
+    function qt_palmeiras(){
+    exibir_pal.innerHTML = "<img src='taca-mondial.jpg' alt='porcão;' style='width:200px'>"
+
+    }
+    function rem_escudos(){
+        exibir_corinthans.innerHTML = "";
+        exibir_sp.innerHTML = "";
+        exibir_san.innerHTML = "";
+        exibir_pal.innerHTML = "";
+
+    }
+    function esconder(){
+        mun_corinthans.style.display = "none"; 
+        mun_sp.style.display = "none"; 
+        mun_san.style.display = "none"; 
+        mun_palmeiras.style.display = "none";
+        botao_esconder.style.display="none";
+        botao_mostrar.style.display = "block";
+    }
+    function mostrar(){
+        mun_corinthans.style.display = "block"; 
+        mun_sp.style.display = "block"; 
+        mun_san.style.display = "block"; 
+        mun_palmeiras.style.display = "block";
+        botao_esconder.style.display="block";
+        botao_mostrar.style.display = "none";
+    }
+
+</script>
+
+<!-- 5 (desafio). Alguns clubes de futebol de São Paulo já conquistaram o mundial de clubes da FIFA. 
+Dentre os grandes, o Palmeiras luta para que o troféu "Cachaça 51" seja considerado como tal, mas, 
+até agora, a FIFA não o considera. Crie um programa em HTML/JS o qual: 
+a) Tenha os escudos dos 4 grandes clubes de futebol de São Paulo, lado a lado (não pode ser usada a tag <button>, apenas <img>)
+b) Ao clicar no escudo de um deles, aparecem N taças de mundial da FIFA, lado a lado, conforme a quantidade que o clube tem 
+(Corinthians: 2, Santos: 2, São Paulo: 3). Cada taça deve ter apenas 100px de altura.
+A imagem da taça é esta:
+d) Ao lado das imagens dos escudos dos times, deve haver um botão "Resetar programa". Ao clicar nele, todas as imagens de troféu 
+que eventualmente estiverem na tela, devem sumir
+
+e) Ao lado do botão do item d) deve haver outro botão, o "Esconder escudos". Ao clicar nele, todos os escudos dos clubes somem, 
+bem como o próprio botão "Esconder escudos". E aparece um outro botão, o "Mostrar escudos". Ao clicar nele, ele mesmo some e os 
+escudos e o botão "Esconder escudos" reaparecem. 
+-->

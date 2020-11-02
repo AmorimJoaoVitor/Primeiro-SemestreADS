@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exerc4 aula 28</title>
+</head>
+<body>
+    <button onclick="pares()">Ver Pares</button>
+    <div id="div_num"></div>
+</body>
+</html>
+<script>
+    function pares(){
+        div_num.innerHTML = "";
+        var numero = 0
+
+        while(numero < 100){
+            numero += 2
+            div_num.innerHTML += `${numero}<br>`;
+        }
+    }
+</script>

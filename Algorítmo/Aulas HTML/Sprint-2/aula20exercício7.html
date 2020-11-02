@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exerc4 latinhas</title>
+</head>
+<body>
+    <h2>Quantas latinhas de refri você consome por dia</h2>
+
+    <input type="text" id="in_lata" placeholder="Digite a quantidade de latinhas">
+
+    <button onclick="calcular()">Calcular</button>
+    
+    <br><br><div id="latinhas"></div>
+    <div id="diabetes"></div>
+</body>
+</html>
+
+<script>
+    function calcular(){
+        var lata = Number(in_lata.value);
+
+        var quantidade = lata * 365;
+        latinhas.innerHTML = `Quantidade por ano: ${quantidade}`;
+
+        if (quantidade >= 500){
+        diabetes.innerHTML = "Cuidado com as diabetes";
+        diabetes.style.color = "white";
+        diabetes.style.backgroundColor = "red";
+        diabetes.style.width = "30%";
+        }
+
+    }
+</script>

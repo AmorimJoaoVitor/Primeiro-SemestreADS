@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Aula12</title>
+</head>
+<body>
+    
+    <h3>Limpando conteúdos de tags</h3>
+
+    Para o ser humano, 
+    temperaturas abaixo de <b id="b_fria"></b> são <u id="u_fria">frias</u>
+    <br>
+    E, acima de <b id="b_quente">24ªC</b>, são <u id="u_quente">quentes</u>.
+    <br>
+    <div id="div_conforto">
+    Entre 21ªC e 24ºC é confortável.
+    </div>
+
+    <button onclick="esconder()">Esconder valores</button>
+    
+</body>
+</html>
+<script>
+    function esconder() {
+        // se usar um par de aspas duplas ou simples, sem nada dentro, o corpo da tag some da página
+        b_fria.innerHTML = '';
+        u_fria.innerHTML = '';
+        b_quente.innerHTML = '';
+        u_quente.innerHTML = '';        
+        div_conforto.innerHTML = '';        
+    }
+</script>

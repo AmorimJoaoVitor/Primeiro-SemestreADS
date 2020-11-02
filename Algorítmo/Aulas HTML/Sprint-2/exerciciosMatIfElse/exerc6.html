@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exerc6</title>
+</head>
+<body>
+    Digite um número <input id="num1" type="text">
+    Digite outro número <input id="num2" type="text">
+
+    <button onclick="fazer()">Calcular Raiz</button>
+
+    <div id="div_resultado"></div>
+</body>
+</html>
+
+<script>
+    function fazer(){
+        var n1 = Number(num1.value);
+        var n2 = Number(num2.value);
+
+        var elevado = n1 ** (1/n2);
+
+        div_resultado.innerHTML = ` A ${n2}ª raiz de ${n1} dá ${elevado}`;
+    }
+</script>
+<!-- 6. Crie um programa em HTML/JS o qual:
+a) Solicite um número
+b) Solicite outro número
+c) Ao clicar em "Calcular Raiz", exibe, abaixo, um texto como este:
+    a Bª raiz  de A dá X
+Onde A é o número informado em a) e B é o número informado em b)
+Ex: o usuário informou 25 e 2. Deve aparecer: "a 2ª raiz de 25 dá 5"
+
+ -->

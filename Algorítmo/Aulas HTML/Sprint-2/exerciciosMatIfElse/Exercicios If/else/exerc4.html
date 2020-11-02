@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exerc 4 - Times SP</title>
+</head>
+
+<body>
+    <h2>Para qual dos 4 grandes times de SP que você torce?</h2>
+
+    <br>
+   Copie e cole: "Corinthans", "Palmeiras", "São Paulo" ou "Santos";
+    <input type="text" id="in_times">
+    <button onclick="descrever()">Fale sobre esse time</button>
+    <br> <span id="descricao"></span>
+
+</body>
+
+</html>
+
+<script>
+
+
+    function descrever() {
+        var time = (in_times.value);
+
+        if (time == "Corinthans") {
+            descricao.innerHTML = "Salve o Corinthans!";
+            descricao.style.color = "white";
+            descricao.style.backgroundColor = "black";
+        }
+        else if (time == "Palmeiras") {
+            descricao.innerHTML = "Salve o alviverde imponente!";
+            descricao.style.color = "white";
+            descricao.style.backgroundColor = "green";
+        }
+        else if (time == "São Paulo") {
+            descricao.innerHTML = "Salve o Tricolor paulista!";
+            descricao.style.color = "red";
+            descricao.style.backgroundColor = "black";
+        }
+        else{
+            descricao.innerHTML = "Agora que dá a bola é o Santos!";
+            descricao.style.color = "black";
+            descricao.style.backgroundColor = "white"; 
+        }
+    }
+
+</script>
+
+<!-- 4. Crie um programa o qual:
+a) Pergunte numa combo, qual time grande São Paulo o usuáro torce. Use uma combo.
+b) Ao clicar em "Fale sobre esse time", exiba abaixo:
+   "Salve o Corinthians" com fundo preto e letra branca, se for Corinthians
+   "Salve o alviverde imponente" com fundo verde e letra branca, se for Palmeiras
+   "Agora que dá a bola é o Santos" com fundo branco e letra preta, se for Santos
+   "Salve o Tricolor paulista" com fundo preto e letra vermelha, se for São Paulo
+ -->

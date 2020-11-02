@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exerc1 - aula 24</title>
+</head>
+
+<body>
+    Escolha uma bebida:<br>
+    <select name="" id="in_bebida">
+        <option value="0">Nenhuma</option>
+        <option value="2">Água</option>
+        <option value="3">Refrigerante</option>
+        <option value="5">Cerveja</option>
+    </select><br>
+    Escolha uma refeição<br>
+    <select name="" id="in_refeicao">
+        <option value="0">Nenhuma</option>
+        <option value="10">Salada</option>
+        <option value="12">Feijoada</option>
+        <option value="13">Bife a cavalo</option>
+        <option value="14">Peixe Frito</option>
+    </select><br>
+    Digite seu nome <input id="in_nome"></input>
+    <button onclick="calcular()">Calcular total</button>
+    <div id="div_resultado"></div>
+</body>
+
+</html>
+
+<script>
+    function calcular() {
+        var bebida = Number(in_bebida.value);
+        var refeicao = Number(in_refeicao.value);
+
+        var total = bebida + refeicao;
+
+        div_resultado.innerHTML = `Olá, ${in_nome.value}. Seu almoço vai custar um total de R$${total}`;
+    }
+</script>

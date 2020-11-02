@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exerc5</title>
+</head>
+<body>
+    Digite um número <input id="num1" type="text">
+    Digite outro número <input id="num2" type="text">
+
+    <button onclick="fazer()">Fazer potência</button>
+
+    <div id="div_resultado"></div>
+</body>
+</html>
+
+<script>
+    function fazer(){
+        var n1 = Number(num1.value);
+        var n2 = Number(num2.value);
+
+        var elevado = n1 ** n2;
+
+        div_resultado.innerHTML = `${n1} elevado a ${n2} dá ${elevado}`;
+    }
+</script>
+<!-- 5. Crie um programa em HTML/JS o qual:
+a) Solicite um número
+b) Solicite outro número
+c) Ao clicar em "Fazer potência", exibe, abaixo, um texto como este:
+    A elevado a B dá X
+Onde A é o número informado em a) e B é o número informado em b)
+ -->

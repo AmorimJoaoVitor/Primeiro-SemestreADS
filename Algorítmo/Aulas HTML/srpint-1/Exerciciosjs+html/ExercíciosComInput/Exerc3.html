@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mesma coisa da 2 mas em gráficos</title>
+</head>
+
+<body>
+    <h2>Eleições com gráficos</h2>
+    Zé buduia<input type="text" id="ze"><br>
+<div id="buduia" style="background-color: green; width: 40%; height: 20px; display: none;"></div>
+
+    Maria bigodenha<input type="text" id="maria"><br>
+    <div id="bigodenha" style="background-color: red; width: 35%; height: 20px; display: none;"></div>
+
+    Brancos<input type="text" id="brancos"><br>
+
+
+    Nulos<input type="text" id="nulos"><br>
+    <div id="brancos_e_nulos" style="background-color: gray; width: 25%; height: 20px; display: none;"></div>
+
+    <button onclick="calcular()">Resultado da eleição</button>
+
+
+    <p id="p_resultado"></p>
+
+</body>
+
+</html>
+<script>
+function calcular() {
+    var votos_totais = Number(ze.value) + Number(maria.value) + Number(brancos.value)+ Number(nulos.value) ;
+    var votos1 = votos_totais * 0.40 ;
+    var votos2 = votos_totais * 0.35 ;
+    var invalidos = Number(brancos.value) + Number(nulos.value)
+     
+    p_resultado.innerHTML = `
+    Total de votos: ${votos_totais}<br>
+    Zé Ruela: 40 % (${votos1})<br>
+    Maria Bigodenha: 35 % (${votos2})<br>
+    Inválidos: 25 % (${invalidos})`
+    
+    buduia.style.display = "block"
+    bigodenha.style.display = "block"
+    brancos_e_nulos.style.display = "block"
+
+}
+</script>
+
+<!-- 3 (desafio). Refaça o  programa da questão anterior de tal forma que, ao clicar em "Resultado da Eleição",
+     sejam exibidos textos e "barras" conforme o exemplo abaixo:
+
+
+
+As alturas das "barras" é de 30px. Suas larguras são sempre uma porcentagem, de acordo com a porcentagem do 
+total de votos calculada. Ex: Na figura, a barra verde tem 40% no width de seu style. -->

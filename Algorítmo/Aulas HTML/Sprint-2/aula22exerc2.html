@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 22 exerc</title>
+</head>
+<body>
+    <input  type="text" id="valor_maximo" placeholder="Valor máximo de cada amigo no 'racha'">
+    <br>
+    <input type="text" id="qt_amigos" placeholder="Quantos amigos tem?">
+    <br>
+    <input type="text" id="valor_pizza" placeholder="Qual o valor da pizza">
+    <button onclick="calcular()">Rola pizza?</button>
+    <br>
+    <div id="div_resultado"></div>
+</body>
+</html>
+<script>
+    function calcular(){
+        var maximo = Number(valor_maximo.value);
+        var amigos = Number(qt_amigos.value);
+        var pizza = Number(valor_pizza.value);
+
+        var preco = pizza / amigos;
+       
+        if(preco < maximo) {
+            div_resultado.innerHTML = "#PartiuPizza"
+        }
+        else {
+            div_resultado.innerHTML = "É melhor procurar uma pizza mais barata";
+            valor_maximo.value = ""
+            qt_amigos.value = ""
+            valor_pizza.value = ""
+        }
+    }
+</script>

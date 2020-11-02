@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 22 exerc</title>
+</head>
+
+<body>
+    <input type="text" id="n1" placeholder="Informe a primeira nota">
+    <br>
+    <input type="text" id="n2" placeholder="Informe a segunda nota">
+    <button onclick="calcular()">Calcular média</button>
+    <br>
+    <div id="div_resultado2"></div>
+    <div id="div_resultado"></div>
+</body>
+
+</html>
+<script>
+    function calcular() {
+        var nota1 = Number(n1.value);
+        var nota2 = Number(n2.value);
+
+        var media = (nota1 + nota2) / 2
+        div_resultado2.innerHTML = `Sua média é = ${media}`;
+
+        if (media >= 6) {
+            div_resultado.innerHTML = "Parabéns, aprovado!";
+        }
+        else {
+            div_resultado.innerHTML = "Tente outra vez";
+        }
+    }
+</script>

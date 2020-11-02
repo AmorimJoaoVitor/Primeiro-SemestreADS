@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exerc2</title>
+</head>
+<body>
+    <button onclick="coracao_piludo()">Pessoa fria</button>
+    <button onclick="coracao_talvez()">Pessoa neutra</button>
+    <button onclick="coracao_colerico()">Pessoa nervosa</button> <br>
+<br>
+     <span id="estado_de_espirito">Bom dia colegas.</span>
+
+</body>
+</html>
+<script>
+function coracao_piludo(){
+    estado_de_espirito.style.color = "darkblue";
+}
+function coracao_talvez(){
+    estado_de_espirito.style.color = "gray";
+}
+function coracao_colerico(){
+    estado_de_espirito.style.color = "red";
+}
+</script>
+<!-- 2. Crie um programa em HTML/JS o qual:
+a) Tenha os botões "Pessoa fria", "Pessoa neutra", "Pessoa nervosa"
+b) Abaixo dos botões deve haver um texto na cor preta dizendo "Bom dia, colegas"
+c) Ao clicar no primeiro botão, o texto fica com a cor azul escuro
+d) Ao clicar no segundo botão, o texto fica com a cor cinza
+e) Ao clicar no terceiro botão, o texto fica com a cor vermelha
+OBS: não é para mudar o conteúdo do texto, e sim alterar apenas sua cor! -->

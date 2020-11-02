@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 22</title>
+</head>
+<body>
+    <input  type="text" id="in_idade" placeholder="Qual a sua idade?">
+    <br>
+    <button onclick="situacao()">Situação eleitoral</button>
+    <br>
+    <div id="div_resultado"></div>
+</body>
+</html>
+<script>
+    function situacao(){
+        var idade = Number(in_idade.value);
+
+        if(idade >= 16) {
+            div_resultado.innerHTML = "Você já pode votar!";
+        }
+        else {
+            div_resultado.innerHTML = "Você ainda não pode votar!";
+        }
+    }
+</script>

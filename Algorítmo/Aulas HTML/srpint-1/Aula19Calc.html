@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 19</title>
+</head>
+<body style="background-color: lightskyblue;">
+    
+    <b>Primeiro número:</b> <input id="in_numero1" placeholder="Digite um número"><br>
+    <b>Primeiro número:</b> <input id="in_numero2" placeholder="Digite um número"><br>
+
+    <button onclick="subtrair()">Subtrair</button> <br>
+    <button onclick="multiplicar()">Multiplicar</button> <br>
+    <button onclick="dividir()">Dividir</button> <br>
+    <button onclick="potencializar()">Potência</button> <br>
+    <button onclick="somar()">Somar</button> <br>
+
+    <div id="div_resultado"></div>
+
+</body>
+</html>
+
+<script>
+
+    function subtrair(){
+        //Criar uma variável chamada 'subtracao' variável é uma informação que o programa pode usar depois
+        
+        var subtracao = in_numero1.value - in_numero2.value;
+        div_resultado.innerHTML = `Subtração: ${subtracao}`;
+    }
+
+    function multiplicar(){
+        var multiplicacao = in_numero1.value * in_numero2.value;
+        div_resultado.innerHTML = `Multiplicação: ${multiplicacao}`;
+    }
+
+    function dividir(){
+         var divisao = in_numero1.value / in_numero2.value;
+         div_resultado.innerHTML = `Divisão: ${divisao}`;                                      
+    }
+
+    function potencializar(){
+        var potenciacao = in_numero1.value ** in_numero2.value;
+        div_resultado.innerHTML = `Potência: ${potenciacao}`;
+    }
+
+    function somar(){
+        var soma = Number(in_numero1.value) + Number(in_numero2.value);
+        div_resultado.innerHTML = `Soma: ${soma}`;    
+    }
+</script>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fases do sono</title>
+</head>
+
+<body style="align-items: center; display: flex; flex-direction: column; justify-content: center;">
+    <div style="align-items: center; display: flex; flex-direction: column;">
+        <h2>Fases do sono</h2>
+
+        <b>Horas de sono</b><input type="text" id="in_sono" placeholder="Digite as horas de sono"><br>
+        <button onclick="calcular_sono()">Calcular horas</button>
+        <p id="resposta_sono"></p>
+    </div>
+</body>
+
+</html>
+
+<script>
+    function calcular_sono() {
+        resposta_sono.innerHTML =
+         `Ao dormir ${in_sono.value} horas, você dormiu:<br>
+          <u>${in_sono.value * 0.05}</u> horas na <b>fase 1</b><br>
+          <u>${in_sono.value * 0.45}</u> horas na <b>fase 2</b><br>
+          <u>${in_sono.value * 0.30}</u> horas na <b>fase 3</b><br>
+          <u>${in_sono.value * 0.20}</u> horas na <b>fase REM</b>`
+     }
+</script>
+<!-- a) Solicite ao usuário quantas horas de sono ele dormiu
+b) Ao clicar no botão "Calcular Sono", faça os cálculos necessários para exibir o seguinte conteúdo na tela:
+    Ao dormir X horas, você dormiu:
+    A horas na fase 1
+    B horas na fase 2
+    C horas na fase 3
+    D horas na fase REM -->

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AC1-João Vitor de Amorim</title>
+</head>
+
+<body style="background-color: bisque;">
+    <h4>RA-01202021</h4>
+    <h2>Calculadora de Quilograma para Libra.</h2>
+
+    <div style="width: 500px; height:50%; ">Para você que um dia quer ir para os <b style="color: blue;">Estados</b> <b
+            style="color: crimson;">Unidos</b>,
+        e não quer passar vergonha falando seu peso em quilos, porque que lá mede-se o peso em libras, use este
+        conversor de peso de <b>Quilos(Kg)</b> para<b> Libras(lb)</b>
+    </div>
+
+    <p>
+        Seu nome<input type="text" id="in_nome" placeholder="Digite seu nome"><br><br>
+        Seu peso <input id="in_peso" placeholder="Digite seu peso (Quilos)">
+    </p>
+
+    <br><br>
+    <div style="width: 90px; height: 20px;  float: left;"></div>
+    <button onclick="calc_libras()" style="width: 100px; float: left;">Calcular</button><br><br>
+
+    <div id="div_libras"></div>
+</body>
+
+</html>
+
+<script>
+    function calc_libras() {
+        var peso_em_libras = in_peso.value * 2.205;
+        div_libras.innerHTML = `<b>Pois bem senhor(a) ${in_nome.value}, seu peso em quilos é de <u style="color: green;"> ${in_peso.value} Kg</u> e em libras é de <u style="color: blue;">${peso_em_libras} lb</u>,<br>
+        então, lembre-se de usar o valor em <u>libras</u> pala falar de seu peso nos <span style="color: blue;">Estados</span> <span style="color: red;">Unidos</span></b>`;
+
+    }
+</script>

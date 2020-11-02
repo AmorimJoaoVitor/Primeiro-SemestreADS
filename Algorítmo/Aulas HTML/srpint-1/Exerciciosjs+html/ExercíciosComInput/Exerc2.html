@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Votos</title>
+</head>
+
+<body>
+    <h2>Votação</h2>
+    Zé buduia<input type="text" id="ze">
+    Maria bigodenha<input type="text" id="maria">
+    Brancos<input type="text" id="brancos">
+    Nulos<input type="text" id="nulos"><br>
+    <button onclick="calcular()">Resultado da eleição</button>
+    <p id="p_resultado"></p>
+
+</body>
+
+</html>
+
+<script>
+    function calcular() {
+        var votos_totais = Number(ze.value) + Number(maria.value) + Number(brancos.value)+ Number(nulos.value) ;
+        var votos1 = votos_totais * 0.40 ;
+        var votos2 = votos_totais * 0.35 ;
+        var invalidos = Number(brancos.value) + Number(nulos.value)
+         
+        p_resultado.innerHTML = `
+        Total de votos: ${votos_totais}<br>
+        Zé Ruela: 40 % (${votos1})<br>
+        Maria Bigodenha: 35 % (${votos2})<br>
+        Inválidos: 25 % (${invalidos})`
+    }
+</script>
+<!-- 2. Crie um programa em HTML/JS o qual:
+a) Solicite a quantidade de votos que o "Zé Buduia" (ou o nome que quiser) teve na eleição
+b) Solicite a quantidade de votos que a "Maria Bigodenha" (ou o nome que quiser) teve na eleição
+c) Solicite a quantidade de votos brancos que houveram na eleição
+d) Solicite a quantidade de votos nulos que houveram na eleição
+e) Ao clicar em "Resultado da Eleição", exibir textos  conforme o exemplo abaixo:
+ Total de votos: 200
+    Zé Ruela: 40% (80 votos)
+    Maria Bigodenha: 35% (70 votos)
+    Inválidos: 25% (50 votos)
+ -->

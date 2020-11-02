@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cofrinho</title>
+</head>
+<body>
+    Você tem R$<b id="saldo">0.00</b>.<br>
+    <button onclick="dez()">Depositar R$10</button><br>
+    <button onclick="dois()">Tirar R$2</button><br>
+
+    Você realizou <b id="cont_depositos">0</b> depósitos
+    Você realizou <b id="cont_saques">0</b> saques
+
+</body>
+</html>
+
+<script>
+    var dinheiro = 0;
+    var deposito = 0;
+    var saque = 0;
+
+    function dez(){
+        dinheiro += 10;
+        saldo.innerHTML = dinheiro;
+        deposito ++;
+        cont_depositos.innerHTML = deposito;
+
+        if (dinheiro ){}
+    }
+    function dois(){
+        dinheiro -= 2;
+        saldo.innerHTML = dinheiro;
+        saque ++;
+        cont_saques.innerHTML = saque;
+    }
+</script>

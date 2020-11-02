@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exerc11</title>
+</head>
+
+<body>
+
+    <h2>Banco Itado</h2>
+
+    <input type="text" id="in_saldo" placeholder="Digite seu saldo">
+    <input type="text" id="in_debito" placeholder="Digite o valor do débito">
+
+    <button onclick="analisar()">Analisar conta</button>
+
+    <div id="div_resultado"></div>
+
+</body>
+
+</html>
+
+<script>
+    function analisar(){
+        var operacao = in_saldo.value - in_debito.value
+        div_resultado.innerHTML = `<b>O saldo atual da conta corrente é R$${operacao}</b>`;
+
+        if (operacao < 0){
+            div_resultado.style.color = "red";
+            
+        }
+
+
+    }
+</script>
+
+<!-- 11. Criar um programa em HTML/JS que auxilie o Banco Itado a identificar quem entrou no cheque especial.
+a) Solicite o saldo da conta
+b) Solicite o valor do débito (ou seja, valor a tirar da conta)
+c) Ao clicar em "Analisar conta", calcule o novo saldo da conta e exiba a mensagem
+ "o saldo atual da conta corrente é xx.xx". Esta frase deverá estar em negrito e em vermelho somente se o saldo for menor que zero.
+
+ -->

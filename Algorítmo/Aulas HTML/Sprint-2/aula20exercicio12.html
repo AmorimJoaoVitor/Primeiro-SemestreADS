@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exerc12 - elevador</title>
+</head>
+
+<body>
+    <h2>Controle de peso do elevador</h2>
+
+    <input type="text" placeholder="Quantos homens tem?" id="in_man">
+    <input type="text" placeholder="Quantas mulheres tem?" id="in_girl">
+    <br>
+    <button onclick="analisar()">Analisar peso</button><br>
+
+    <p id="p_resultado"></p>
+
+
+</body>
+
+</html>
+
+<script>
+    function analisar() {
+        var peso_total = in_man.value * 80 + in_girl.value * 60;
+        p_resultado.innerHTML = `Este elevador suporta 800 Kg e o peso estimado desta lotação é de ${peso_total} Kg<br>`;
+        
+        if (peso_total > 800){
+            p_resultado.innerHTML += "<span style='color: blue;'>Será necessário descer alguém para que o elevador se movimente!</span>" 
+        }
+
+    }
+</script>
+
+
+<!-- 12. Crie um programa em HTML/JS que controle o peso médio dentro de um elevador:
+
+a) Solicite a quantidade de homens que entraram no elevador
+b) Solicite a quantidade de mulher que entraram no elevador
+c) Ao clicar em "Analisar peso", calcule o peso estimado sendo: homens x 80 somado com mulheres x 60
+d) Exiba na página a mensagem "Este elevador suporta 800 Kg e o peso estimado desta lotação é de xxxkg";
+e) Se o peso estimado for maior que 800, exibir também a mensagem "Será necessário descer alguém para que o elevador se movimente", 
+na cor azul. -->

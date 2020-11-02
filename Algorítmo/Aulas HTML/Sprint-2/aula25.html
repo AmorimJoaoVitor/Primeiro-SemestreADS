@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>25</title>
+</head>
+<body>
+ 
+    <input type="text" placeholder="Média do(a) aluno(a)" id="in_media"><br>
+    <input type="text" placeholder="Frequência do(a) aluno(a)" id="in_frequencia"><br>
+
+    <button onclick="avaliar()">Avaliar</button>
+
+    <div id="div_resultado"></div>
+    
+</body>
+</html>
+<script>
+    function avaliar(){
+        var media = Number(in_media.value);
+        var frequencia = Number(in_frequencia.value);
+
+        if (media >= 6 && frequencia >= 75){
+            div_resultado.innerHTML = "Parabéns! Aprovado."
+        }
+        else {
+            div_resultado.innerHTML = "Parabéns! Reprovado."
+        }
+    }
+</script>

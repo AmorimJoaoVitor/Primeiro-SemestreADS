@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exerc9 energia</title>
+</head>
+
+<body>
+    <h2>Conta de luz</h2>
+
+    <input type="text" id="in_conta" placeholder="Digite o valor de KwH">
+
+    <button onclick="calcular()">Calcular conta</button>
+
+    <div id="div_resultado"></div>
+    <div id="div_resultado2"></div>
+
+
+
+</body>
+
+</html>
+
+<script>
+    function calcular() {
+        var calculo = in_conta.value * 0.85;
+        div_resultado.innerHTML = `Sua conta deu o total de R$${calculo.toFixed(2)}<br>`;
+
+        if (in_conta.value < 100) {
+            var desconto = calculo * 0.9;
+        div_resultado.innerHTML += `Valor com desconto: R$${desconto.toFixed(2)}`;
+        }
+    }
+
+</script>
+
+<!-- 9. Na cidade Paulopolis a luz custa R$ 0,85 por kWh. Criar um programa em HTML/JS que:
+a) Solicite a quantidade de kWh consumida no mês
+b) Ao clicar em "alcular conta de luz", calcule o valor da conta no mês
+c) Dê um desconto de 10% somente se a quantidade for menor que 100 kWh
+d) Exiba um alerta com o valor da conta a ser paga
+
+OBS. Faça o diagrama de atividades para este exercício. -->

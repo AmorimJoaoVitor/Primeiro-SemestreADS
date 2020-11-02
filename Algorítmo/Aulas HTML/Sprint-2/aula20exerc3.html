@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exerc 3</title>
+</head>
+<body>
+    <h2>Quantos filhos você tem?</h2>
+
+    Digite quantos filhos você tem <input type="text" id="qt_filhos">
+
+    <button onclick="verificar()">Verificar situação</button>
+
+    <div id="div_resultado"></div>
+
+    
+</body>
+</html>
+
+<script>
+    function verificar(){
+        var filhos = Number(qt_filhos.value);
+
+        if (filhos == 0){
+            div_resultado.innerHTML = "Sem descendentes";
+        }
+        if (filhos == 1){
+            div_resultado.innerHTML = "Só um?";
+        }
+        if (filhos >= 2){
+            div_resultado.innerHTML = "Crescei e multiplicai-vos";
+        }
+    }
+</script>

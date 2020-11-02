@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exerc 5</title>
+</head>
+<body>
+    <input type="number" placeholder="Digite a tabuada" id="in_tabuada">
+    <br>
+    <button onclick="ver()">Ver tabuada</button>
+    <div id="div_tab"></div>
+</body>
+</html>
+<script>
+    function ver(){
+        div_tab.innerHTML = "";
+        var tabuada = Number(in_tabuada.value);
+        var contador = 1
+
+        while(contador <= 10){
+            var conta = tabuada * contador
+            div_tab.innerHTML += `${tabuada} X ${contador} = ${conta}<br>`;
+            contador ++;
+        }
+    }
+</script>

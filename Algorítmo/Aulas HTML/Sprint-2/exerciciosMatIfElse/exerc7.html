@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exerc7</title>
+</head>
+<body>
+
+Digite o primeiro número da progressão <input type="text" id="numero1">
+Digite a razão da PG <input type="text" id="razao">
+Digite o termo da PG que deseja ver <input id="termo">
+
+<button onclick="calculo()">Calcular PG</button>
+
+<div id="div_resultado"></div>
+
+</body>
+</html>
+<script>
+    function calculo(){
+        var n1 = Number(numero1.value);
+        var n2 = Number(razao.value);
+        var n3 = Number(termo.value);
+
+        var pg = n1 * (n2 ** [n3-1])
+
+        div_resultado.innerHTML = `O ${n3}º termo nessa PG será ${pg}`;
+    }
+</script>
+
+<!-- 7. Crie um programa em HTML/JS que calcule a progressão geométrica, fazendo o seguinte:
+a) Solicite o 1º número da progressão
+b) Solicite a razão
+c) Solicite qual o número (termo) da progressão deseja ver
+d) Ao clicar em "Calcular PG", calcule o termo conforme indicado em c) e exiba, abaixo a frase
+    O Xº termo nessa PG será Y
+Onde X é o número indicado em c) e Y é o valor que o programa calculou
+ -->

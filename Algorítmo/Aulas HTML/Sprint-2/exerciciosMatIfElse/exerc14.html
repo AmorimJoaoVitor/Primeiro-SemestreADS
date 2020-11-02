@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exerc14 - desafio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <img onclick="golpe_scorpion()" class="scorpion" src="scorpion.png" alt="escorpião"><br>
+        <div id="life_scorpion" class="vida_s"></div>
+        <u style="color:red; margin-bottom: 10px;">Golpes sofridos pelo lutador: <b id="golpes_scorpion">0</b></u>
+        <img onclick="golpe_sub()" class="sub" src="sub-zero.png" alt="sub-zero"><br>
+        <div id="life_sub" class="vida_sub_zero"></div>
+        <u style="color:red">Golpes sofridos pelo lutador: <b id="golpes_sub_zero">0</b></u>
+    </div>
+
+</body>
+
+</html>
+
+<script>
+    function golpe_scorpion() {
+        var golpes_sc = Number(golpes_scorpion.innerHTML);
+        golpes_sc++
+        golpes_scorpion.innerHTML = golpes_sc;
+
+      var vida_scorpion = Number(life_scorpion.innerHTML.style.width);
+          vida_scorpion =- 5;
+
+          life_scorpion.innerHTML.style.width = `${vida_scorpion}`;
+    }
+    function golpe_sub() {
+        var golpes_sub = Number(golpes_sub_zero.innerHTML);
+        golpes_sub++
+        golpes_sub_zero.innerHTML = golpes_sub;
+    }
+</script>
+
+<!-- 14 (desafio). Crie um programa em HTML/JS que simule um jogo de luta simples.
+a) Nada deve aparacer na tela, a princípio, a não ser um botão "Iniciar Jogo". Ao clicar nele, aparecem os itens a seguir...
+b) Aparecem as fotos de 2 lutadores (como as dos exemplos abaixo). E, abaixo deles, uma "barra de vida", que ocupa 100% da 
+largura da tela.
+
+c) Abaixo das imagens e barras, deve haver o texto:
+   Golpes sofridos pelo lutador 1: 0
+   Golpes sofridos pelo lutador 2: 0
+
+d) Sempre que for clicada na imagem um dos lutadores, seu "contador" aumenta em 1 e sua barra reduz em 5% bruto (não relativo). 
+Ex: estava em 90%, vai para 85%. Estava em 75%, vai para 70%. -->

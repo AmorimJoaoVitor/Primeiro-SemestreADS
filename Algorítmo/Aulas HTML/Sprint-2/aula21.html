@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 21 Atalhos matemáticos</title>
+</head>
+
+<body>
+    <input type="text" id="in_numero" placeholder="Digite um número">
+
+    <br>
+
+    <button onclick="elevarQuadrado()">Elevar ele ao quadrado</button>
+
+    <br>
+    <button onclick="aumentar1()">Aumentar em 1</button>
+    <br>
+    <button onclick="diminuir5()">Diminuir 5</button>
+    <br>
+    <button onclick="aumentar1s()">Aumentar em 1 (simples)</button>
+    <br>
+    <button onclick="diminuir1s()">Diminuir em 1 (simples)</button>
+
+    <div id="div_resultado"></div>
+
+</body>
+
+</html>
+
+<script>
+    function elevarQuadrado() {
+        var numero = Number(in_numero.value);
+        var quadrado = numero ** 2;
+
+        div_resultado.innerHTML = `${numero} elevado ao quadrado: ${quadrado}<br>`;
+
+    }
+
+    function aumentar1(){
+        var numero = Number(in_numero.value);
+        numero += 1; // Aqui estamos pedindo para o JS aumentar o valor da 'numero' em 1
+        // numero = numero + 1
+div_resultado.innerHTML += `${in_numero.value} +1 é ${numero}`;
+    }
+
+    function diminuir5(){
+        var numero = Number(in_numero.value);
+        numero -= 5;
+div_resultado.innerHTML = `${in_numero.value} menos 5 é: ${numero}`;
+    }
+
+    function aumentar1s(){
+        var numero = Number(in_numero.value);
+        numero ++ ; 
+div_resultado.innerHTML = `${in_numero.value} mais 1 = ${numero}`;
+    }
+
+    function diminuir1s(){
+        var numero = Number(in_numero.value);
+        numero -- ; 
+div_resultado.innerHTML = `${in_numero.value} menos 1 = ${numero}`;
+    }
+</script>

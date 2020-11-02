@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exerc1 - notas</title>
+</head>
+
+<body>
+    digite sua nota, aluno <input type="text" id="in_nota"><br>
+    <button onclick="classificar()">Classificar Aluno</button>
+
+    <div id="div_resultado"></div>
+
+    <span style="color: red;"></span>
+</body>
+
+</html>
+
+<script>
+    function classificar() {
+
+
+        var n1 = Number(in_nota.value);
+
+        if (n1 < 0) {
+            div_resultado.innerHTML = `Nota ${n1} inválida`;
+        }
+
+        else if (n1 <= 5) {
+            div_resultado.innerHTML = "  <span style='color: red;'>Aluno precisa de muita ajuda</span>";
+        }
+        else if (n1 <= 7) {
+            div_resultado.innerHTML = "Aluno na média";
+            div_resultado.style.color = "orange";
+        }
+        else if (n1 <= 9.5) {
+            div_resultado.innerHTML = "Aluno acima da média";
+            div_resultado.style.color = "green";
+        }
+        else if (n1 <= 10) {
+            div_resultado.innerHTML = "<span style='color: blue;'>Aluno fora da curva</span>";
+        }
+        else {
+            div_resultado.innerHTML = `Nota ${n1} inválida!`;
+        }
+    }
+</script>
+<!-- 1. Crie um programa em HTML/JS o qual:
+a) Solicite a nota do aluno
+b) Ao clicar em "Classificar aluno", exiba uma dessas mensagens num alert
+      "Aluno precisa de muita ajuda", caso a nota for menor que 5.
+      "Aluno na média", caso a nota for entre 5 até 7.
+      "Aluno na acima da média", caso a nota for maior que 7 até 9.5.
+      "Aluno fora da curva", caso a nota for maior que 9.5.
+ 
+      2. Melhore o programa da questão anterior de tal forma que:
+a) As mensagens sejam exibidas na própria página, logicamente apenas uma por vez. Sempre abaixo do botão
+b) A primeira mensagem deve estar sempre com o texto na cor vermelha
+c) A segunda mensagem deve estar sempre com o texto na cor laranja
+d) A terceira mensagem deve estar sempre com o texto na cor verde
+e) A quarta mensagem deve estar sempre com o texto na cor azul
+
+3. Melhore o programa da questão anterior de tal forma que:
+a) Caso a nota digitada for menor que 0 ou maior que 10, exiba a mensagem
+    "Nota X é inválida!", onde X é anota informada. Texto sempre na cor preta.
+
+    -->

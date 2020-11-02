@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exerc1</title>
+</head>
+
+<body>
+    <input type="text" placeholder="Digite a frase a ser exibida" id="in_mensagem">
+    <input type="text" placeholder="Quantas vezes deseja repetir a frase?" id="in_qtd">
+    <button onclick="filosofar()">Filosofar</button>
+    <div id="div_msg"></div>
+</body>
+
+</html>
+<script>
+
+    function filosofar() {
+        var quantidade = Number(in_qtd.value);
+        if (in_mensagem.value == "") {
+            alert('Cadê a frase?');
+        }
+        else if (quantidade <= 0) {
+            alert('Quantidade inválida');
+        }
+        else {
+            div_msg.innerHTML = "";
+            var mostrar = 0;
+
+            while (mostrar < quantidade) {
+                div_msg.innerHTML += `${in_mensagem.value}.<br>`;
+                mostrar++;
+                console.log('mostrar', mostrar);
+            }
+        }
+    }
+</script>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>25</title>
+</head>
+<body>
+ 
+    <input type="text" placeholder="Digite sua idade" id="in_media"><br>
+    <input type="text" placeholder="Digite seu peso" id="in_frequencia"><br>
+
+    <button onclick="avaliar()">Pode brincar?</button>
+
+    <div id="div_resultado"></div>
+    
+</body>
+</html>
+<script>
+    function avaliar(){
+        var media = Number(in_media.value);
+        var frequencia = Number(in_frequencia.value);
+
+        if (media > 15 && frequencia <= 100){
+            div_resultado.innerHTML = "Você poderá brincar :)";
+            div_resultado.style.color = "blue";
+        }
+        else {
+            div_resultado.innerHTML = "Você não poderá brincar";
+            div_resultado.style.color = "red";
+        }
+    }
+</script>

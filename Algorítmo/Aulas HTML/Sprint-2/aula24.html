@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 24- combo</title>
+</head>
+
+<body>
+    Qual o tipo de alimento que você mais consome?
+    <select name="" id="in_alimento">
+        <option value="0">- Indique o alimento -</option>
+        <option value="90">Frutas</option>
+        <option value="70">Legumes</option>
+        <option value="50">Carnes</option>
+        <option value="10">Fast-Food</option>
+    </select>
+
+    <button onclick="avaliar_alimentacao()">Avaliar alimentação</button>
+
+    <div id="div_avaliacao"></div>
+
+</body>
+
+</html>
+
+<script>
+    function avaliar_alimentacao(){
+  var alimento = in_alimento.value;
+
+  if (alimento == "0"){
+      div_avaliacao.innerHTML = "Por favor, escolha um alimento";
+  } 
+  else{
+      div_avaliacao.innerHTML = `Nota de sua alimentação (0 a 100): ${alimento}`;
+  }
+    }
+</script>

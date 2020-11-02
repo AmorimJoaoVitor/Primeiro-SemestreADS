@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exerc12 -</title>
+</head>
+
+<body>
+    Porções de pão francês: <b id="pao">0</b> <br>
+    Porções de carne boniva: <b id="carne">0</b> <br>
+    Porções de carne de soja: <b id="soja">0</b> <br>
+    Porções de arroz com feijão: <b id="arroz">0</b> <br>
+    Total de calorias: <b id="total">0</b> <br>
+
+    <button onclick="comer_pao()">Comer um pão francês</button><br>
+    <button onclick="comer_carne()">Comer carne</button><br>
+    <button onclick="comer_soja()">Comer soja</button><br>
+    <button onclick="comer_arroz()">Comer arroz com feijão</button><br>
+    <button onclick="recomecar()">Recomeçar</button><br>
+
+</body>
+
+</html>
+
+<script>
+    function comer_pao(){
+        var frances = Number(pao.innerHTML);
+             frances ++
+         pao.innerHTML = frances;
+         
+         var calorias = Number(total.innerHTML);
+             calorias += 50;
+         total.innerHTML = calorias;    
+    }
+
+    function comer_carne(){
+        var boi = Number(carne.innerHTML);
+             boi ++
+         carne.innerHTML = boi;
+         
+         var calorias = Number(total.innerHTML);
+             calorias += 100;
+         total.innerHTML = calorias;    
+    }
+
+    function comer_soja(){
+        var grao = Number(soja.innerHTML);
+             grao ++
+         soja.innerHTML = grao;
+         
+         var calorias = Number(total.innerHTML);
+             calorias += 30;
+         total.innerHTML = calorias;    
+    }
+
+    function comer_arroz(){
+        var rice = Number(arroz.innerHTML);
+             rice ++
+         arroz.innerHTML = rice;
+         
+         var calorias = Number(total.innerHTML);
+             calorias += 120;
+         total.innerHTML = calorias;    
+    }
+
+    function recomecar(){
+        pao.innerHTML = "0"
+        carne.innerHTML = "0"
+        soja.innerHTML = "0"
+        arroz.innerHTML = "0"
+        total.innerHTML = "0"
+    }
+</script>
+
+<!-- 13. Crie um programa em HTML/JS que ajuda um nutricionista a calcular calorias diárias consumidas 
+    por seus pacientes:
+a) Tenho, logo de cara, o texto:
+    Porções de pão francês: 0   
+    Porções de carne boniva: 0   
+    Porções de carne de soja: 0  
+    Porções de arroz com feijão: 0
+    Total de calorias: 0   
+
+b) Tenha o botão "Comer um pão francês". Ao clicar nele, aumenta em um o contador respectivo no texto em a) 
+
+e adiciona 50 calorias ao final do mesmo texto.
+
+c) Tenha o botão "Comer porção de carne boniva". Ao clicar nele, aumenta em um o contador respectivo no texto 
+
+em a) e adiciona 100 calorias ao final do mesmo texto.
+
+d) Tenha o botão "Comer porção de carne de soja". Ao clicar nele, aumenta em um o contador respectivo no texto
+
+em a) e adiciona 30 calorias ao final do mesmo texto.
+
+e) Tenha o botão "Comer porção de arroz com feijão". Ao clicar nele, aumenta em um o contador respectivo no 
+
+texto em a) e adiciona 120 calorias ao final do mesmo texto.
+
+f) Tenha o botão "Recomeçar", todos os contadores (até o total de calorias) do texto em a) zeram -->

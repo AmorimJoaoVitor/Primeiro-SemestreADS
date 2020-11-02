@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Norma Ligna</title>
+</head>
+
+<body>
+
+    <h2>Calcule sua média</h2>
+
+    <input type="text" id="nota1">
+    <input type="text" id="nota2">
+    <input type="text" id="nota3">
+
+    <button onclick="analisar()">Analisar desempenho </button>
+
+    <div id="div_resultado"></div>
+    <div id="acima"></div>
+
+</body>
+
+</html>
+
+<script>
+    function analisar() {
+        var n1 = Number(nota1.value);
+        var n2 = Number(nota2.value);
+        var n3 = Number(nota3.value);
+
+        var media = (n1 + n2 + n3) / 3;
+
+        div_resultado.innerHTML = `Sua média foi de ${media.toFixed(2)}`;
+        if (media >= 9.4) {
+            acima.innerHTML = "Parabéns, você é fora de série!"
+        }
+    }
+</script>

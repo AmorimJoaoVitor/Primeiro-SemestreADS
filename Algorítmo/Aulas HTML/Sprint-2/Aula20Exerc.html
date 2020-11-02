@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 20 - CNH</title>
+</head>
+
+<body>
+    <h2>Compra de maçãs</h2>
+
+    Quantas maçãs você comprou?
+    <input type="text" id="in_macas"><br>
+
+    <button onclick="verificar()">Verificar situação</button>
+    <p id="p_resultado"></p>
+    <p id="p_resultado2"></p>
+
+    <h2>Valor so seguro de um carro</h2>
+
+    Digite suas infrações<input type="text" id="in_infracoes">
+    Digite o valor do carro <input type="text" id="in_carro">
+
+    <button onclick="calcular()">Calcular seguro</button>
+
+    <p id="resultado3"></p>
+    <p id="resultado4"></p>
+</body>
+
+</html>
+
+<script>
+    function verificar() {
+        var qt_macas = Number(in_macas.value);
+        
+        var total = qt_macas * 0.75;
+        p_resultado.innerHTML =`Valor de sua compra: ${total.toFixed(2)}`;
+
+        var desconto = qt_macas * 0.68;
+        if (qt_macas >= 10) {
+            p_resultado2.innerHTML =`Seu valor com desconto: ${desconto.toFixed(2)}`;
+        }
+
+    }
+
+    function calcular(){
+        var infracoes = Number(in_infracoes.value);
+        var carro = Number(in_carro.value);
+
+        var seguro = carro * 0.015;
+
+        if (infracoes <3){
+            seguro = seguro * 0.9;
+        }
+
+resultado3.innerHTML = `Seu seguro ficará em R$${seguro.toFixed(2)}`;
+    }
+</script>

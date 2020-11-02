@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="div_cliques">Você já clicou <b id="contagem">0</b> vezes </div>
+    <button onclick="clique()">Clica nimim</button>
+</body>
+</html>
+
+<script>
+    function clique(){
+        var conta = Number(contagem.innerHTML);
+         conta ++
+        
+contagem.innerHTML = conta;
+       
+    }
+</script>
+
+<!-- 4 (desafio). Usando apenas o que foi ensinado até agora, crie um programa em HTML/JS o qual:
+
+a) Tenha um texto "Você já clicou 0 vezes"
+
+b) Abaixo do texto, um botão "Clica nimim". Sempre que clicar nele o número do texto em a) aumenta em 1 
+
+(ex: "Você já clicou 7 vezes", após 7 cliques) -->
