@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ciclismo Interativo</title>
+    <link rel="stylesheet" href="../Site/CSS/style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bungee+Inline&family=Laila:wght@300&family=Trispace:wght@500&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="../Site/JS/script.js"></script>
+</head>
+
+<body>
+
+    <nav>
+
+        <input type="checkbox" id="check">
+        <img src="../Site/Imagens/PedaleComigoLogonovo.png" alt="Logo">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="ciclistas.html">Ciclistas Famosos</a></li>
+            <li><a href="autor.html">Autor</a></li>
+            <li class="current"><a>Login</a></li>
+        </ul>
+        <label for="check" class="checkbtn">
+            <i class="fas fa-bars"></i>
+        </label>
+ </nav>
+ <div class="login">
+     <div class="login_container">
+         <h1>Login</h1>
+         <form id="form_login" class="formulario" method="POST" onsubmit="return entrar()">
+             
+        <div class="textbox">
+            <i class="fas fa-user"></i> <input type="text" name="login"  placeholder="Usuário" autocomplete="off">
+        </div>
+        <div class="textbox">
+            <i class="fas fa-lock"></i> <input type="password" name="senha"  placeholder="Senha">
+        </div>
+          <button id="btn_entrar" class="submit_btn" type="submit">Entrar</button>
+        </form>
+        <a class="link_form" href="#" id="esqueci_senha">Esqueceu a senha?</a>
+        <div class="login_social">
+             <p>
+                 Alternativas de login
+             </p>
+             <div>
+                 <img src="../Site/Imagens/social_fb_facebook_14206.png" alt="">
+                 <img src="../Site/Imagens/gmail_14189.png" alt="">
+                </div>
+         </div>
+         <div class="register">
+             <p>Registre-se abaixo</p>
+             <a class="link_form" href="cadastro.html">Registrar</a>
+         </div>
+     </div>
+ </div>
+ <!-- FOOTER -->
+ <footer>
+    <div class="rodape">
+        <div class="logo_rod">
+            <img src="../Site/Imagens/PedaleComigoLogonovo.png" alt="bicicleta">
+            <p>
+                Chame a turma toda para uma pedalada.
+            </p>
+        </div>
+        <div class="sugestoes">
+            <p>
+                registre-se para receber notificações de pedaladas e atualizações.
+            </p>
+        </div>
+        <div class="social">
+            <h5>Acesse nossas redes sociais para acompanhar as atualizações e postagens do mundo do ciclismo </h5>
+            <img src="../Site/Imagens/001-facebook.png" alt="facebook">
+            <img src="../Site/Imagens/003-instagram.png" alt="instagram">
+            <img src="../Site/Imagens/002-twitter.png" alt="twitter">
+
+        </div>
+    </div>
+</footer>
+<!-- END FOOTER -->
+</body>
+
+</html>
